@@ -419,13 +419,18 @@
         </section>
         <br><br>
         <section>
-            <input type="text" id="text-input" name="username" placeholder="Name">
-            <br><br>
-            <input type="text" id="text-input" name="username" placeholder="Email">
-            <br><br>
-            <input type="text" id="text-input" name="username" placeholder="Subject">
-            <br><br>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            <form action="">
+                <fieldset>
+                    <legend>Contact Me</legend>
+                    <input type="text" id="text-input" name="username" placeholder="Name"    required>
+                    <br><br>
+                    <input type="email" id="text-input" name="username" placeholder="Email"   required>
+                    <br><br>
+                    <input type="text" id="text-input" name="username" placeholder="Subject" required>
+                    <br><br>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Message" required></textarea>
+                </fieldset>
+            </form>
         </section>
         <br>
         <button>Send</button>
