@@ -12,6 +12,39 @@
     <meta name="author" content="Vishal">
     <meta name="theme-color" content="red">
     <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto+Mono&family=Staatliches&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto+Mono&family=Source+Code+Pro:wght@800&family=Staatliches&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Dongle:wght@700&family=Roboto+Mono&family=Source+Code+Pro:wght@800&family=Staatliches&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Dongle:wght@700&family=Roboto+Mono&family=Source+Code+Pro:wght@800&family=Staatliches&family=Vollkorn:wght@800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Dongle:wght@700&family=Roboto+Mono&family=Source+Code+Pro:wght@800&family=Staatliches&family=Vollkorn:ital,wght@0,400;0,800;1,400&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Dongle:wght@700&family=Roboto+Mono&family=Sora:wght@600&family=Source+Code+Pro:wght@800&family=Staatliches&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Dongle:wght@700&family=Roboto+Mono&family=Rubik&family=Sora:wght@600&family=Source+Code+Pro:wght@800&family=Staatliches&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Dongle:wght@700&family=Roboto+Mono&family=Rubik&family=Sora:wght@600&family=Source+Code+Pro:wght@800&family=Staatliches&display=swap" rel="stylesheet">
 
 </head>
 
@@ -19,10 +52,15 @@
     <!---Header-->
     <header>
         <dfn id="home"></dfn>
-        <nav >
+        <nav class = "line">
                 <font face="Staatliches">
                     <ul>
-                        <li><a href="#home">HOME</a></li>
+                        <li>
+                            <aside class="logoimg">
+                                <img src="assets\mynamelogo(Portfolio) 1 (1).png" alt="logo" width="170px" height="55px">
+                            </aside>
+                        </li>
+                        <li class="lifont"><a href="#home">HOME</a></li>
                         <li><a href="#features">FEATURES</a></li>
                         <li><a href="#expertise">EXPERTISE</a></li>
                         <li><a href="#Aboutme">ABOUT ME</a></li>
@@ -36,44 +74,48 @@
 
     <!--Main-->
     <main >
-        <section>
-            <div>
-                <p >
-                    <h2>WELCOME</h2>
-                    <b>
-                        <h3>Hello I'm</h3>
-                    </b>
-                    <h1>Vishal</h1>
-                    <h2> Sandakelum</h2>
-                    <b>A Professional Full Stack Devaloper</b>
-                    <small>
-                        <br>
-                        Hey...I'm Full stack Developer in Sri Lanka. This is my Official Portfolio Web to <br>
-                        show all Details About My Software Development. 
-                    </small>
-                </p>
-            </div>
+        <section class="main2">
+            <section>
+                <div>
+                    <p >
+                        <h2 class="sourcecode">WELCOME</h2>
+                        <b>
+                            <h3 class="Hello">Hello I'm</h3>
+                        </b>
+                        <div class="Namline">
+                            <h1 class="firstNam">Vishal</h1>
+                            <h2 class="lastNam"> Sandakelum</h2>
+                        </div>
+                        <b class="Title">A Professional Full Stack Devaloper</b>
+                        <small class="paragraph1">
+                            <br>
+                            Hey...I'm Full stack Developer in Sri Lanka. This is my Official Portfolio Web to <br>
+                            show all Details About My Software Development. 
+                        </small>
+                    </p>
+                </div>
+            </section>
+            <aside class="myimg1">
+                <img src="assets\Group 1.png" alt="">
+            </aside>
+            <ul class="contactimgcontent1">
+                <a href="https://www.linkedin.com/in/vishal-sandakelum-352294258/">
+                    <img src="assets\linkedin 1.png" alt="Linked In" >
+                </a>
+                <a href="https://github.com/VishalSandakelum">
+                    <img src="assets\code 1.png" alt="Git Hub">
+                </a>
+                <a href="">
+                    <img src="assets\facebook 1.png" alt="Facebook">
+                </a>
+                <a href="">
+                    <img src="assets\whatsapp 1.png" alt="Whatsapp">
+                </a>
+            </ul>
+            <button class="Hiremebtn">Hire Me</button>
+            <br>
+            <br>
         </section>
-        <aside>
-            <img src="assets\Group 1.png" alt="" class="image-container">
-        </aside>
-        <ul>
-            <a href="https://www.linkedin.com/in/vishal-sandakelum-352294258/">
-                <img src="assets\linkedin 1.png" alt="Linked In" >
-            </a>
-            <a href="https://github.com/VishalSandakelum">
-                <img src="assets\code 1.png" alt="Git Hub">
-            </a>
-            <a href="">
-                <img src="assets\facebook 1.png" alt="Facebook">
-            </a>
-            <a href="">
-                <img src="assets\whatsapp 1.png" alt="Whatsapp">
-            </a>
-        </ul>
-        <button>Hire Me</button>
-        <br>
-        <br>
     </main>
 
     <!--Second Page-->

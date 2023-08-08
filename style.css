@@ -1,0 +1,176 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #E2EFF7;
+    padding: 10px;
+    z-index: 999;
+}
+
+.logoimg{
+    position: relative;
+    left: -200px;
+}
+
+.line {
+    position: relative;
+    font-family: 'Staatliches', sans-serif;
+    height: 45px;
+    right: -250px;
+}
+
+.line ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.line li {
+    margin-right: 90px;
+}
+
+.line li:last-child {
+    margin-right: 0;
+}
+
+.line a {
+    text-decoration: none;
+    color: #333;
+}
+
+.line button {
+    font-family: 'Staatliches', sans-serif;
+    background-color: #59AEE1;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.lifont{
+    font-family: 'Concert One', cursive;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Staatliches', cursive;
+}
+
+
+
+body{
+    
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    padding: 0; 
+}
+
+.sourcecode{
+    font-family: 'Source Code Pro';
+    font-size: 50px;
+    font-weight: 800;
+    color: #ffffff00; 
+    -webkit-text-stroke: 1.5px #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
+    color:  #E2EFF7;
+    
+}
+
+.Hello{
+    position: relative;
+    font-family: 'Concert One', cursive;
+    font-family: 'Dongle', sans-serif;
+    font-size: 50px;
+    top: -75px;
+}
+
+.firstNam{
+    font-family: 'Concert One', cursive;
+    font-family: 'Vollkorn', serif;
+    font-size: 60px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
+    color: #7378FF;
+}
+
+.lastNam{
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
+    font-family: 'Vollkorn';
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.Namline{
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    top: -160px;
+}
+
+.Title{
+    position: relative;
+    font-family: 'Sora';
+    font-size: 17px;
+    top: -180px;
+}
+
+.paragraph1{
+    position: relative;
+    font-family: 'Rubik';
+    font-size: 15px;
+    top: -170px;
+}
+
+.myimg1{
+    position: relative; 
+    top: -530px; 
+    left: 830px;
+}
+
+.contactimgcontent1 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contactimgcontent1 a {
+    display: inline-block;
+    margin: 30px;
+    position: relative; 
+}
+
+
+.contactimgcontent1 a img {
+  position: absolute;
+  top: -730px;
+  left: -690px;
+}
+
+main{
+    background-color: #E2EFF7;
+    height: 700px;
+}
+
+.Hiremebtn{
+    position: relative;
+    font-family: 'Concert One', cursive;
+    background-color: #59AEE1;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    top: -680px;;
+}
+
+.main2{
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+  
+ 
