@@ -6,9 +6,11 @@
     <title>Document</title>
 
     <style>
+
+
         .firstbox{
             position: absolute;
-            border: 2px solid;
+            border: 0px solid;
             width: 50%;
             height: 50%;
             background: rgb(255, 0, 0);
@@ -20,7 +22,7 @@
 
         .secondbox{
             position: absolute;
-            border: 2px solid;
+            border: 0px solid;
             width: 50%;
             height: 50%;
             right: 0%;
@@ -32,7 +34,7 @@
 
         .thirdbox{
             position: absolute;
-            border: 2px solid;
+            border: 0px solid;
             width: 50%;
             height: 50%;
             left: 0%;
@@ -43,7 +45,7 @@
 
         .forthbox{
             position: absolute;
-            border: 2px solid;
+            border: 0px solid;
             width: 50%;
             height: 50%;
             right: 0%;
@@ -115,9 +117,9 @@
             border: 2px solid;
             width: 8%;
             height: 15%;
-            left: -30px;
-            top: -20px;
-            border-bottom-right-radius: 80%;
+            left: 0px;
+            top: 0px;
+            border-bottom-right-radius: 180%;
             margin: auto;
             background: rgb(255, 255, 255);
             border-color: white;
@@ -128,9 +130,9 @@
             border: 2px solid;
             width: 8%;
             height: 15%;
-            right: -30px;
-            top: -20px;
-            border-bottom-left-radius: 80%;
+            right: 0px;
+            top: 0px;
+            border-bottom-left-radius: 180%;
             margin: auto;
             background: rgb(255, 255, 255);
             border-color: white;
@@ -141,9 +143,9 @@
             border: 2px solid;
             width: 8%;
             height: 15%;
-            right: -30px;
-            bottom: -20px;
-            border-top-left-radius: 80%;
+            right: 0px;
+            bottom: 0px;
+            border-top-left-radius: 180%;
             margin: auto;
             background: rgb(255, 255, 255);
             border-color: white;
@@ -154,9 +156,9 @@
             border: 2px solid;
             width: 8%;
             height: 15%;
-            left: -30px;
-            bottom: -20px;
-            border-top-right-radius: 80%;
+            left: 0px;
+            bottom: 0px;
+            border-top-right-radius: 180%;
             margin: auto;
             background: rgb(255, 255, 255);
             border-color: white;
@@ -165,14 +167,28 @@
         .squrefive{
             position: absolute;
             border: 2px solid;
-            width: 8%;
-            height: 15%;
+            width: 16%;
+            height: 30%;
             right: 0%;
-            left: 0%;
-            bottom: -50px;
+            bottom: 0px;
             margin: auto;
-            border-top-left-radius: 60%;
-            border-top-right-radius: 60%;
+            border-top-left-radius: 180%;
+            border-top-right-radius: 0%;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .squrefiveplus{
+            position: absolute;
+            border: 3px solid;
+            width: 16%;
+            height: 30%;
+            left: 0%;
+            bottom: 0px;
+            margin: auto;
+            border-top-left-radius: 0%;
+            border-top-right-radius: 180%;
             margin: auto;
             background: rgb(255, 255, 255);
             border-color: white;
@@ -181,17 +197,41 @@
         .squresix{
             position: absolute;
             border: 2px solid;
-            width: 8%;
-            height: 15%;
+            width: 16%;
+            height: 30%;
             right: 0%;
-            left: 0%;
-            top: -50px;
+            top: 0px;
             margin: auto;
-            border-bottom-left-radius: 60%;
-            border-bottom-right-radius: 60%;
+            border-bottom-left-radius: 180%;
+            border-bottom-right-radius: 0%;
             margin: auto;
             background: rgb(255, 255, 255);
             border-color: white;
+        }
+
+        .squresixplus{
+            position: absolute;
+            border: 2px solid;
+            width: 16%;
+            height: 30%;
+            left: 0%;
+            top: 0px;
+            margin: auto;
+            border-bottom-left-radius: 0%;
+            border-bottom-right-radius: 180%;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        section#secondsec{
+            position: absolute;
+            display: block;
+            top: 1000px;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            
         }
 
     </style>
@@ -204,21 +244,25 @@
             <div class="squre">
                 <div class="squrechild"></div>
             </div>
+            <div class="squresix"></div>
         </section>
         <section class="secondbox">
             <div class="squre">
                 <div class="squrechild"></div>
             </div>
+            <div class="squresixplus"></div>
         </section>
         <section class="thirdbox">
             <div class="squre">
                 <div class="squrechild"></div>
             </div>
+            <div class="squrefive"></div>
         </section>
         <section class="forthbox">
             <div class="squre">
                 <div class="squrechild"></div>
             </div>
+            <div class="squrefiveplus"></div>
         </section>
 
         <div class="main">
@@ -228,8 +272,43 @@
         <div class="squreradiustwo"></div>
         <div class="squreradiusthree"></div>
         <div class="squreradiusfour"></div>
-        <div class="squrefive"></div>
-        <div class="squresix"></div>
+    </section>
+
+    <!--Second part-->
+
+    <section id="secondsec">
+        <section class="firstbox">
+            <div class="squre">
+                <div class="squrechild"></div>
+            </div>
+            <div class="squresix"></div>
+        </section>
+        <section class="secondbox">
+            <div class="squre">
+                <div class="squrechild"></div>
+            </div>
+            <div class="squresixplus"></div>
+        </section>
+        <section class="thirdbox">
+            <div class="squre">
+                <div class="squrechild"></div>
+            </div>
+            <div class="squrefive"></div>
+        </section>
+        <section class="forthbox">
+            <div class="squre">
+                <div class="squrechild"></div>
+            </div>
+            <div class="squrefiveplus"></div>
+        </section>
+
+        <div class="main">
+            <div class="mainsqure"></div>
+        </div>
+        <div class="squreradius"></div>
+        <div class="squreradiustwo"></div>
+        <div class="squreradiusthree"></div>
+        <div class="squreradiusfour"></div>
     </section>
 
 </body>
