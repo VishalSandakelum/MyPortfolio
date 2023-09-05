@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets\8.0.1_normalize.css">
+    <title>index 2</title>
+    
+    
+    <style>
+
+        section:nth-child(1){
+            background-color: green;
+            height: 100vh;
+            width: 100vw;
+        }
+        section:nth-child(1)>section{
+            border: 0px solid;
+            background-color: red;
+            width: 60%;
+            height: 60%;
+            position: absolute;
+            top: 0%;
+            bottom: 0%;
+            left: 0%;
+            right: 0%;
+            margin: auto;
+        }
+
+        section:nth-child(1)>section>div{
+            border: 0px solid;
+            width: 20%;
+            height: 20%;
+            position: absolute;
+            border-radius: 100%;
+            background-color: white;
+            right: 0%;
+
+        }
+
+        section:nth-child(1)>section>section{
+            border: 0px solid;
+            width: 30%;
+            height: 30%;
+            position: absolute;
+            background-color: rgb(52, 1, 255);
+            right: 0%;
+            left: 0%;
+            top: 0%;
+            bottom: 0%;
+            margin: auto;
+
+        }
+
+        section:nth-child(1)>section>section>div{
+            border: 0px solid;
+            width: 30%;
+            height: 30%;
+            position: absolute;
+            background-color: rgb(255, 1, 179);
+            border-radius: 100%;
+            right: 0%;
+            left: 0%;
+            top: 0%;
+            bottom: 0%;
+            margin: auto;
+
+        }
+        
+    
+
+
+    </style>
+</head>
+<body>
+   
+    <section>
+        <section>
+            <div></div>
+            <section>
+                <div></div>
+            </section>
+        </section>
+    </section>
+</body>
+</html>
