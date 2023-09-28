@@ -1437,17 +1437,17 @@ footer>aside>img{
 @media all and (min-width: 320px) and (max-width: 425px){
 
     header{
-        height: 8vh;
+        height: 6vh;
         position: fixed;
     }
 
     #logoimg{
         position: relative;
-        margin-top: 30%;
+        margin-top: 40%;
     }
     
     #logoimg>img{
-        height: 4vh;
+        height: 3vh;
         width: auto;
     }
 
@@ -1504,7 +1504,7 @@ footer>aside>img{
     main{
         position: relative;
         background-color: #E2EFF7;
-        height: 45vh;
+        height: 35vh;
         width: 100%;
     }
 
@@ -1525,7 +1525,7 @@ footer>aside>img{
 
     .sourcecode{
         font-family: 'Source Code Pro';
-        font-size: 15px;
+        font-size: 17px;
         font-weight: 800;
         color: #ffffff00; 
         -webkit-text-stroke: 1.5px #000;
@@ -1538,7 +1538,7 @@ footer>aside>img{
         position: relative;
         font-family: 'Concert One', cursive;
         font-family: 'Dongle', sans-serif;
-        font-size: 10px;
+        font-size: 14px;
         bottom: 4px;
         margin-top: 0%;
         font-weight: 700;
@@ -1581,7 +1581,7 @@ footer>aside>img{
     .paragraph1{
         position: relative;
         font-family: 'Rubik';
-        font-size: 4px;
+        font-size: 5px;
         bottom: 52px;
         font-weight: 400;
     }
@@ -1591,7 +1591,7 @@ footer>aside>img{
         display: flex;
         gap: 4%;
         width: 77%;
-        right: 24%;
+        right: 23%;
         bottom: 61px;
     }
 
@@ -1608,18 +1608,18 @@ footer>aside>img{
         border: none;
         padding: 3px;
         cursor: pointer;
-        border-radius: 6px;
+        border-radius: 5px;
         box-shadow: 0px 4px 4px rgba(89, 174, 225, 0.8 ) ;
-        bottom: 27%;
-        width: 29%;
-        height: 6%;
+        bottom: 17%;
+        width: 36%;
+        height: 5%;
     }
 
     .main2{
         position: relative;
-        top: 28%;
+        top: 22%;
         left: 7%;
-        width: 47vw;
+        width: fit-content;
         height: 60vh;
     }
 
