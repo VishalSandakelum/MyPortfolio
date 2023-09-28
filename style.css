@@ -1438,7 +1438,7 @@ footer>aside>img{
 
     header{
         height: 8vh;
-        border: 2px solid black;
+        position: fixed;
     }
 
     #logoimg{
