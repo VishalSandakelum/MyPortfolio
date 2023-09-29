@@ -1897,6 +1897,10 @@ footer>aside>img{
     width: 28%;
    }
 
+   .aboutmesection:nth-child(3)>div{
+    width: 75%;
+   }
+
    .aboutmesection>div>h4:nth-child(2),h4:nth-child(4){
     font-size: 13px;
    }
