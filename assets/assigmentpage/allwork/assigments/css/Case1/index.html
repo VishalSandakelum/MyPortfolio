@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+        .firstbox{
+            position: absolute;
+            border: 0px solid;
+            width: 50%;
+            height: 50%;
+            background: rgb(255, 0, 0);
+            left: 0%;
+            top: 0%;
+            border-radius: 0px 0px 0px 0px;
+            border-color: red;
+        }
+
+        .secondbox{
+            position: absolute;
+            border: 0px solid;
+            width: 50%;
+            height: 50%;
+            right: 0%;
+            background: rgb(72, 255, 0);
+            right: 0%;
+            top: 0%;
+            border-color: rgb(72, 255, 0);
+        }
+
+        .thirdbox{
+            position: absolute;
+            border: 0px solid;
+            width: 50%;
+            height: 50%;
+            left: 0%;
+            bottom: 0%;
+            background: rgb(217, 255, 0);
+            border-color: rgb(217, 255, 0);
+        }
+
+        .forthbox{
+            position: absolute;
+            border: 0px solid;
+            width: 50%;
+            height: 50%;
+            right: 0%;
+            bottom: 0%;
+            background: rgb(255, 0, 242);
+            border-color: rgb(255, 0, 242);
+        }
+
+        .squre{
+            position: absolute;
+            border: 2px solid;
+            width: 20%;
+            height: 40%;
+            right: 0%;
+            left: 0%;
+            top: 0%;
+            bottom: 0%;
+            margin: auto;
+            border-radius: 100%;
+            background: rgb(253, 253, 253);
+            border-color: white;
+        }
+
+        .squrechild{
+            position: absolute;
+            border: 2px solid;
+            width: 50%;
+            height: 50%;
+            right: 0%;
+            left: 0%;
+            top: 0%;
+            bottom: 0%;
+            margin: auto;
+            background: rgb(236, 0, 0);
+            border-color: red;
+        }
+
+        .main{
+            position: absolute;
+            border: 2px solid;
+            width: 8%;
+            height: 15%;
+            right: 0%;
+            left: 0%;
+            top: 0%;
+            bottom: 0%;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .mainsqure{
+            position: absolute;
+            border: 2px solid;
+            width: 50%;
+            height: 50%;
+            right: 0%;
+            left: 0%;
+            top: 0%;
+            bottom: 0%;
+            border-radius: 100%;
+            margin: auto;
+            background: rgb(236, 0, 0);
+            border-color: red;
+        }
+
+        .squreradius{
+            position: absolute;
+            border: 2px solid;
+            width: 8%;
+            height: 15%;
+            left: 0px;
+            top: 0px;
+            border-bottom-right-radius: 180%;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .squreradiustwo{
+            position: absolute;
+            border: 2px solid;
+            width: 8%;
+            height: 15%;
+            right: 0px;
+            top: 0px;
+            border-bottom-left-radius: 180%;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .squreradiusthree{
+            position: absolute;
+            border: 2px solid;
+            width: 8%;
+            height: 15%;
+            right: 0px;
+            bottom: 0px;
+            border-top-left-radius: 180%;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .squreradiusfour{
+            position: absolute;
+            border: 2px solid;
+            width: 8%;
+            height: 15%;
+            left: 0px;
+            bottom: 0px;
+            border-top-right-radius: 180%;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .squrefive{
+            position: absolute;
+            border: 2px solid;
+            width: 16%;
+            height: 30%;
+            right: 0%;
+            bottom: 0px;
+            margin: auto;
+            border-top-left-radius: 180%;
+            border-top-right-radius: 0%;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .squrefiveplus{
+            position: absolute;
+            border: 3px solid;
+            width: 16%;
+            height: 30%;
+            left: 0%;
+            bottom: 0px;
+            margin: auto;
+            border-top-left-radius: 0%;
+            border-top-right-radius: 180%;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .squresix{
+            position: absolute;
+            border: 2px solid;
+            width: 16%;
+            height: 30%;
+            right: 0%;
+            top: 0px;
+            margin: auto;
+            border-bottom-left-radius: 180%;
+            border-bottom-right-radius: 0%;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .squresixplus{
+            position: absolute;
+            border: 2px solid;
+            width: 16%;
+            height: 30%;
+            left: 0%;
+            top: 0px;
+            margin: auto;
+            border-bottom-left-radius: 0%;
+            border-bottom-right-radius: 180%;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        section#secondsec{
+            position: absolute;
+            display: block;
+            top: 1000px;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <section>
+        <section class="firstbox">
+            <div class="squre">
+                <div class="squrechild"></div>
+            </div>
+            <div class="squresix"></div>
+        </section>
+        <section class="secondbox">
+            <div class="squre">
+                <div class="squrechild"></div>
+            </div>
+            <div class="squresixplus"></div>
+        </section>
+        <section class="thirdbox">
+            <div class="squre">
+                <div class="squrechild"></div>
+            </div>
+            <div class="squrefive"></div>
+        </section>
+        <section class="forthbox">
+            <div class="squre">
+                <div class="squrechild"></div>
+            </div>
+            <div class="squrefiveplus"></div>
+        </section>
+
+        <div class="main">
+            <div class="mainsqure"></div>
+        </div>
+        <div class="squreradius"></div>
+        <div class="squreradiustwo"></div>
+        <div class="squreradiusthree"></div>
+        <div class="squreradiusfour"></div>
+    </section>
+
+    <!--Second part-->
+
+    <section id="secondsec">
+        <section class="firstbox">
+            <div class="squre">
+                <div class="squrechild"></div>
+            </div>
+            <div class="squresix"></div>
+        </section>
+        <section class="secondbox">
+            <div class="squre">
+                <div class="squrechild"></div>
+            </div>
+            <div class="squresixplus"></div>
+        </section>
+        <section class="thirdbox">
+            <div class="squre">
+                <div class="squrechild"></div>
+            </div>
+            <div class="squrefive"></div>
+        </section>
+        <section class="forthbox">
+            <div class="squre">
+                <div class="squrechild"></div>
+            </div>
+            <div class="squrefiveplus"></div>
+        </section>
+
+        <div class="main">
+            <div class="mainsqure"></div>
+        </div>
+        <div class="squreradius"></div>
+        <div class="squreradiustwo"></div>
+        <div class="squreradiusthree"></div>
+        <div class="squreradiusfour"></div>
+    </section>
+
+</body>
+</html>

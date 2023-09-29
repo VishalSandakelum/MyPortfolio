@@ -1,0 +1,302 @@
+body>section:nth-child(2){
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.cssAssigmentmainSection{
+    display: flex;
+    width: 80%;
+    height: 650px;
+    position: relative;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+    flex-direction: column;
+    row-gap: 9%;
+}
+
+.firstrow{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    column-gap: 5%;
+}
+
+.secondrow{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    column-gap: 5%;
+}
+
+.firstrow>div,.secondrow>div{
+    position: relative;
+    width: calc(100%/3);
+    height: 100%;
+    border: 2px solid gray;
+    border-radius: 15px;
+    transition: all;
+    transition-duration: 1s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+}
+
+svg{
+    transition: all;
+    transition-duration: 3s;
+    bottom: 3%;
+}
+
+.firstrow>div:hover,.secondrow>div:hover{
+    transition: all;
+    transition-duration: 1s;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 10px 0 rgba(0, 0, 0, 0.19), 0 0 0 0 rgba(0, 0, 0, 0.19), 0 10px 10px 5px rgba(0, 0, 0, 0.19);
+
+}
+
+.firstrow>div>svg:hover{
+    transition: all;
+    transition-duration: 2s;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    width: 70%;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+}
+
+.firstrow>div>a>button,.secondrow>div>a>button{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.firstrow>div>a>button>h2,.secondrow>div>a>button>h2{
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Concert One', cursive;
+    font-size: 40px;
+    font-weight: 50;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    margin: auto;
+}
+
+body>div:nth-child(1)>h1{
+    font-family: 'Concert One', cursive;
+    color: #59AEE1;
+    font-size: 58px;
+    font-weight: 50;
+    margin-bottom: 0%;
+}
+
+body>div:nth-child(1){
+    width: fit-content;
+    position: relative;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+}
+
+/*Media Query For (0> & >320) Mobile Small Size .................................*/
+
+@media all and (min-width: 0px) and (max-width: 320px){
+
+    body>div:nth-child(1)>h1{
+        font-size: 45px;
+    }
+
+    .csstitle{
+        font-size: 26px;
+    }
+
+    .cssAssigmentmainSection{
+        width: 82%;
+        height: 200vh;
+        left: 0%;
+        right: 0%;
+        margin: auto;
+        flex-direction: column;
+        row-gap: 2%;
+    }
+
+    .firstrow{
+        height: 296%;
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5%;
+    }
+    
+    .secondrow{
+        height: 296%;
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5%;
+    }
+
+    .firstrow>div,.secondrow>div{
+        width: 78%;
+        left: 0%;
+        right: 0%;
+        margin: auto;
+    }
+
+}
+
+/*Media Query For (Min-width : 320px & Max-Width : 375px) Mobile Medium Size ...................................*/
+
+@media all and (min-width: 321px) and (max-width: 376px){
+
+    body>div:nth-child(1)>h1{
+        font-size: 45px;
+    }
+
+    .csstitle{
+        font-size: 26px;
+    }
+
+    .cssAssigmentmainSection{
+        width: 82%;
+        height: 200vh;
+        left: 0%;
+        right: 0%;
+        margin: auto;
+        flex-direction: column;
+        row-gap: 2%;
+    }
+
+    .firstrow{
+        height: 296%;
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5%;
+    }
+    
+    .secondrow{
+        height: 296%;
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5%;
+    }
+
+    .firstrow>div,.secondrow>div{
+        width: 78%;
+        left: 0%;
+        right: 0%;
+        margin: auto;
+    }
+
+}
+
+/*Media Query For (Min-Width: 375px) and (Max-Width: 426px) Mobile Large*/
+
+@media all and (min-width: 376px) and (max-width: 426px){
+
+    body>div:nth-child(1)>h1{
+        font-size: 45px;
+    }
+
+    .csstitle{
+        font-size: 26px;
+    }
+
+    .cssAssigmentmainSection{
+        width: 82%;
+        height: 200vh;
+        left: 0%;
+        right: 0%;
+        margin: auto;
+        flex-direction: column;
+        row-gap: 2%;
+    }
+
+    .firstrow{
+        height: 296%;
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5%;
+    }
+    
+    .secondrow{
+        height: 296%;
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5%;
+    }
+
+    .firstrow>div,.secondrow>div{
+        width: 78%;
+        left: 0%;
+        right: 0%;
+        margin: auto;
+    }
+
+}
+
+/*Media For (Min-width: 426px) and (Max-Width: 768px)*/
+
+@media all and (min-width: 426px) and (max-width: 769px){
+
+    .cssAssigmentmainSection{
+        width: 90%;
+        row-gap: 5%;
+    }
+
+    .firstrow{
+        height: 45%;
+        column-gap: 5%;
+    }
+    
+    .secondrow{
+        height: 45%;
+        column-gap: 5%;
+    }
+
+    .firstrow>div,.secondrow>div{
+        width: calc(100%/3);
+        height: 90%;
+        
+    }
+
+}
+
+/*Media For (Min-width: 765px) and (Max-Width: 1024px)*/
+
+@media all and (min-width: 769px) and (max-width: 1024px){
+
+    .cssAssigmentmainSection{
+        width: 90%;
+        row-gap: 5%;
+    }
+
+    .firstrow{
+        height: 45%;
+        column-gap: 5%;
+    }
+    
+    .secondrow{
+        height: 45%;
+        column-gap: 5%;
+    }
+
+    .firstrow>div,.secondrow>div{
+        width: calc(100%/3);
+        height: 85%;
+        
+    }
+
+}
+
