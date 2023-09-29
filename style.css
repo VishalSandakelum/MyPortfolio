@@ -1837,7 +1837,7 @@ footer>aside>img{
 
   .ForthPage{
     width: 100%;
-    height: 350vh;
+    height: 267vh;
   }
 
   .ForthPage>h1{
@@ -1869,7 +1869,7 @@ footer>aside>img{
   }
 
   .aboutmesection:hover{
-    width: 100%;
+    width: 99%;
     height: 34%;
   }
 
@@ -1906,6 +1906,10 @@ footer>aside>img{
    }
 
    /*Five Page*/
+
+   .FivePage{
+    height: 100vh;
+   }
 
    .FivePage>h1:nth-child(1){
     font-size: 26px;
@@ -1975,7 +1979,7 @@ footer>aside>img{
     /*Six Page*/
 
     .SixPage{
-        height: 520vh;
+        height: 346vh;
     }
 
     .SixPage>h1:nth-child(2){
@@ -2061,6 +2065,46 @@ footer>aside>img{
 
     .toolsection:hover{
         width: 80.5%;
+    }
+
+    /*Seven Page*/
+
+    .SevenPage{
+        height: 96vh;
+    }
+
+    .projecttext{
+        font-size: 30px;
+    }
+
+    .textalign>h3{
+        font-size: 17px;
+    }
+
+    .feedbacktext{
+        font-size: 7px;
+    }
+
+    .mainsectionforcheckAP{
+        width: 80%;
+        height: 40%;
+    }
+
+    .sectionareacover{
+        width: 53%;
+        height: 67%;
+    }
+
+    .buttonsection{
+        width: 118vw;
+    }
+
+    .buttonforleftside{
+        display: none;
+    }
+
+    .buttonforrightside{
+        display: none;
     }
 
 }
