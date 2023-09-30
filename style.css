@@ -122,6 +122,19 @@ main{
     color:  #E2EFF7;
 }
 
+.buttonanimahurt{
+    border: 2px solid red;
+}
+
+.buttonanimahurt>img{
+    width: 3%;
+    position: relative;
+    bottom: 30%;
+    left: 10%;
+    z-index: 0;
+    display: none;
+}
+
 .firstNam{
     font-family: 'Concert One', cursive;
     font-family: 'Vollkorn', serif;
@@ -181,6 +194,7 @@ main{
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(89, 174, 225, 0.8 ) ;
     bottom: 140px;
+    z-index: 20;
 }
 
 .contactimgcontent1{
@@ -3040,6 +3054,12 @@ footer>aside>img{
         margin-top: 2%;
     }
 
+    .line li:nth-child(2):hover,li:nth-child(3):hover,li:nth-child(3):hover,li:nth-child(4):hover,li:nth-child(5):hover,li:nth-child(6):hover,li:nth-child(7):hover{
+        height: fit-content;
+        border-bottom: 3px solid rgb(170, 0, 255);
+        width: max-content;
+    }
+
     .line a {
         text-decoration: none;
         font-size: 60%;
@@ -3838,6 +3858,12 @@ footer>aside>img{
         margin-top: 2%;
     }
 
+    .line li:nth-child(2):hover,li:nth-child(3):hover,li:nth-child(3):hover,li:nth-child(4):hover,li:nth-child(5):hover,li:nth-child(6):hover,li:nth-child(7):hover{
+        height: fit-content;
+        border-bottom: 4px solid rgb(170, 0, 255);
+        width: max-content;
+    }
+
     /*First Page*/
 
     .main2{
@@ -3846,6 +3872,14 @@ footer>aside>img{
 
     .myimg1>img{
         height: 90%;
+    }
+
+    .buttonanimahurt{
+        display: contents;
+    }
+
+    .buttonanimahurt>img{
+        
     }
 
     /*Second Page*/
