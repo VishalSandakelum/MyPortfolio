@@ -123,7 +123,7 @@ main{
 }
 
 .buttonanimahurt{
-    border: 2px solid red;
+    /*border: 0px solid red;*/
 }
 
 .buttonanimahurt>img{
@@ -3858,7 +3858,7 @@ footer>aside>img{
         margin-top: 2%;
     }
 
-    .line li:nth-child(2):hover,li:nth-child(3):hover,li:nth-child(3):hover,li:nth-child(4):hover,li:nth-child(5):hover,li:nth-child(6):hover,li:nth-child(7):hover{
+    header>.line li:nth-child(2):hover,header>.line li:nth-child(3):hover,header>.line li:nth-child(3):hover,header>.line li:nth-child(4):hover,header>.line li:nth-child(5):hover,header>.line li:nth-child(6):hover,header>.line li:nth-child(7):hover{
         height: fit-content;
         border-bottom: 4px solid rgb(170, 0, 255);
         width: max-content;
