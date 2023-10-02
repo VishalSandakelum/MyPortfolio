@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Item</title>
+    <title>Order</title>
 
     <link rel="stylesheet" href="..\css\bootstrap.css">
 </head>
@@ -52,41 +52,92 @@
           <div class="col-12">
             <div class="row">
                 <div class="col-3 align-self-start fs-4">
-                    <img src="..\img\packaging.png" style="width: 15%;" alt="">
-                  Items
+                    <img src="..\img\checklist (1).png" style="width: 15%;" alt="">
+                  Order
                 </div>
             </div>
           </div>
           <div class="row">
             <div class="col-6 ">
-                <div style="border: 2px solid rgb(197, 197, 197); ">
-                    <div class="container-fluid bg-success">
-                        <div class="col-3 align-self-start fs-4" style="font-weight: bold; color: white;">
-                            Item
-                        </div>
+                <div class="col-12" style=" border: 2px solid black;">
+                    <div class="col-12 bg-success fs-5" style="font-weight: bold; height: 35px; color: white;">Invoice Details</div>
+                    <div class="col-11 " style="margin: 3%;">
+                        <form>
+                            <div class="mb-3 d-flex flex-row" style="border: 2px solid black;">
+                              <div style="width: 45%;">
+                                <label for="exampleInputEmail1" class="form-label">Order ID : </label>
+                                <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              </div>
+                              <div class="col-5" style="margin-left: 10%; width: 45%;">
+                                <label for="exampleInputEmail1" class="form-label">Date : </label>
+                                <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                              </div>
+                            </div>
+                            <div class="mb-3 d-flex flex-row" style="border: 2px solid black;">
+                                <div style="width: 45%;">
+                                  <label for="exampleInputEmail1" class="form-label">Customer : </label>
+                                  <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div class="col-5" style="margin-left: 10%; width: 45%;">
+                                  <label for="exampleInputEmail1" class="form-label">Customer ID : </label>
+                                  <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                </div>
+                            </div>
+                            <div class="mb-3 d-flex flex-row" style="border: 2px solid black;">
+                                <div style="width: 45%;">
+                                  <label for="exampleInputEmail1" class="form-label">Name : </label>
+                                  <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div class="col-5" style="margin-left: 10%; width: 45%;">
+                                  <label for="exampleInputEmail1" class="form-label">Salary : </label>
+                                  <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                </div>
+                              </div>
+                            <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Address :</label>
+                              <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                          </form>
                     </div>
-                    <form class="row g-3 mt-4">
-                        <div class="col-md-9" style="margin-left: 3%;">
-                          <input type="email" placeholder="Input Item Name/Code Here" class="form-control" id="inputEmail4">
-                        </div>
-                
-                        <div class="col-md-4" style="margin-left: 3%;">
-                          <select id="inputState" class="form-select">
-                            <option selected>Name</option>
-                            <option>NIC</option>
-                          </select>
-                        </div>
-                        <div class="col-10" style="margin-left: 3%; margin-bottom: 3%;">
-                          <button type="submit" class="btn btn-primary" style="position: relative; margin-right: 84%;">Search</button>
-                        </div>
-                      </form>
                 </div>
-                
             </div>
+
             <div class="col-6 ">
-                <div class="col-6" style="margin-left: 52%;">
-                    <button type="button" class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="width: 45%;">New Item</button>
-                    <button type="button" class="btn btn-success" style="width: 45%;">View All</button>
+                <div class="col-12 border border-2" style="height: 100%;">
+                    <div class="col-12 bg-success fs-5" style="font-weight: bold; height: 35px; color: white;">Item Select</div>
+                    <div class="col-11 " style="margin: 3%;">
+                        <form>
+                            <div class="mb-3 d-flex flex-row">
+                              <div class="col-6">
+                                <label for="exampleInputEmail1" class="form-label">Item : </label>
+                                <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              </div>
+                              <div style="margin-left: 5%; width: 50%;">
+                                <label for="exampleInputEmail1" class="form-label">Item Code : </label>
+                                <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                              </div>
+                            </div>
+                            <div class="mb-3 d-flex flex-row">
+                                <div class="col-5">
+                                  <label for="exampleInputEmail1" class="form-label">Item Name : </label>
+                                  <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div style="margin-left: 5%;">
+                                  <label for="exampleInputEmail1" class="form-label">Price : </label>
+                                  <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                </div>
+                                <div style="margin-left: 5%;">
+                                    <label for="exampleInputEmail1" class="form-label">Qty OnHa : </label>
+                                    <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                  </div>
+                              </div>
+                            <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Order Quantity :</label>
+                              <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="position: relative; margin-left: 83%;">Add Item</button>
+                          </form>
+                    </div>
                 </div>
             </div>
           </div>
@@ -134,7 +185,7 @@
 
       <!--ADD New Form-->
 
-    <div class="modal fade" tabindex="-1" id="staticBackdrop" data-bs-backdrop="static">
+    <!--<div class="modal fade" tabindex="-1" id="staticBackdrop" data-bs-backdrop="static">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -169,7 +220,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
     
     <script src="..\js\bootstrap.js"></script>
 </body>
