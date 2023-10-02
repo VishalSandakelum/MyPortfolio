@@ -457,18 +457,21 @@
         const orderpage = document.querySelector("#orderpage");
 
         cuspagebtn.addEventListener("click",function(){
-            document.querySelector("#customerpage").style.display = 'none';
-            document.querySelector("#itempage").style.display = 'block';
+            cuspage.style.display = "block";
+            itempage.style.display = "none";
+            orderpage.style.display = "none";
         });
 
         itembtn.addEventListener("click",function(){
-            document.querySelector("#customerpage").style.display = 'none';
-            document.querySelector("#itempage").style.display = 'block';
+            itempage.style.display = "block";
+            cuspage.style.display = "none";
+            orderpage.style.display = "none";
         });
 
         orderbtn.addEventListener("click",function(){
-            document.querySelector("#customerpage").style.display = 'none';
-            document.querySelector("#itempage").style.display = 'block';
+            orderpage.style.display = "block";
+            itempage.style.display = "none";
+            cuspage.style.display = "none";
         });
 
     </script>
