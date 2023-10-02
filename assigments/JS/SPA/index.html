@@ -212,7 +212,7 @@
             </div>
             <div class="col-6 ">
                 <div class="col-6" style="margin-left: 52%;">
-                    <button type="button" class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="width: 45%;">New Item</button>
+                    <button type="button" class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#staticBackdropitem" style="width: 45%;">New Item</button>
                     <button type="button" class="btn btn-success" style="width: 45%;">View All</button>
                 </div>
             </div>
@@ -261,7 +261,7 @@
 
       <!--ADD New Form-->
 
-    <div class="modal fade" tabindex="-1" id="staticBackdrop" data-bs-backdrop="static">
+    <div class="modal fade" tabindex="-1" id="staticBackdropitem" data-bs-backdrop="static">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -394,7 +394,7 @@
                               <label for="exampleInputPassword1" class="form-label">Order Quantity :</label>
                               <input type="" class="form-control" id="exampleInputPassword1">
                             </div>
-                            <button type="submit" class="btn btn-warning" style="position: relative; margin-left: 83%;">Add Item</button>
+                            <button type="button" class="btn btn-warning" style="position: relative; margin-left: 83%;">Add Item</button>
                           </form>
                     </div>
                 </div>
@@ -460,18 +460,42 @@
             cuspage.style.display = "block";
             itempage.style.display = "none";
             orderpage.style.display = "none";
+
+            cuspagebtn.classList.add("active");
+
+            if(itembtn.classList.contains("active")){
+                itembtn.classList.remove("active");
+            }else if(orderbtn.classList.contains("active")){
+                orderbtn.classList.remove("active");
+            }
         });
 
         itembtn.addEventListener("click",function(){
             itempage.style.display = "block";
             cuspage.style.display = "none";
             orderpage.style.display = "none";
+
+            itembtn.classList.add("active");
+
+            if(cuspagebtn.classList.contains("active")){
+                cuspagebtn.classList.remove("active");
+            }else if(orderbtn.classList.contains("active")){
+                orderbtn.classList.remove("active");
+            }
         });
 
         orderbtn.addEventListener("click",function(){
             orderpage.style.display = "block";
             itempage.style.display = "none";
             cuspage.style.display = "none";
+
+            orderbtn.classList.add("active");
+
+            if(itembtn.classList.contains("active")){
+                itembtn.classList.remove("active");
+            }else if(cuspagebtn.classList.contains("active")){
+                cuspagebtn.classList.remove("active");
+            }
         });
 
     </script>
