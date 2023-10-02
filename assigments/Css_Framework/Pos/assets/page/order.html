@@ -59,11 +59,11 @@
           </div>
           <div class="row">
             <div class="col-6 ">
-                <div class="col-12" style=" border: 2px solid black;">
+                <div class="col-12 border border-2">
                     <div class="col-12 bg-success fs-5" style="font-weight: bold; height: 35px; color: white;">Invoice Details</div>
                     <div class="col-11 " style="margin: 3%;">
                         <form>
-                            <div class="mb-3 d-flex flex-row" style="border: 2px solid black;">
+                            <div class="mb-3 d-flex flex-row">
                               <div style="width: 45%;">
                                 <label for="exampleInputEmail1" class="form-label">Order ID : </label>
                                 <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -73,7 +73,7 @@
                                 <input type="email" class="form-control w-100" id="exampleInputEmail1">
                               </div>
                             </div>
-                            <div class="mb-3 d-flex flex-row" style="border: 2px solid black;">
+                            <div class="mb-3 d-flex flex-row">
                                 <div style="width: 45%;">
                                   <label for="exampleInputEmail1" class="form-label">Customer : </label>
                                   <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -83,7 +83,7 @@
                                   <input type="email" class="form-control w-100" id="exampleInputEmail1">
                                 </div>
                             </div>
-                            <div class="mb-3 d-flex flex-row" style="border: 2px solid black;">
+                            <div class="mb-3 d-flex flex-row">
                                 <div style="width: 45%;">
                                   <label for="exampleInputEmail1" class="form-label">Name : </label>
                                   <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -95,7 +95,7 @@
                               </div>
                             <div class="mb-3">
                               <label for="exampleInputPassword1" class="form-label">Address :</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1">
+                              <input type="" class="form-control" id="exampleInputPassword1">
                             </div>
                           </form>
                     </div>
@@ -133,21 +133,17 @@
                               </div>
                             <div class="mb-3">
                               <label for="exampleInputPassword1" class="form-label">Order Quantity :</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1">
+                              <input type="" class="form-control" id="exampleInputPassword1">
                             </div>
-                            <button type="submit" class="btn btn-primary" style="position: relative; margin-left: 83%;">Add Item</button>
+                            <button type="submit" class="btn btn-warning" style="position: relative; margin-left: 83%;">Add Item</button>
                           </form>
                     </div>
                 </div>
             </div>
           </div>
+
+
           <div class="col">
-            <div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-right: 32%; margin-top: 5%;">
-              <button type="button" class="btn btn-danger">Delete</button>
-              <button type="button" class="btn btn-warning">Update</button>
-              <button type="button" class="btn btn-info">Details</Details></button>
-              <button type="button" class="btn btn-success">Clear</button>
-            </div>
             <div style=" height: 240px; ">
                 <table class="table table-bordered border" style="margin-top: 5%;">
                     <thead>
@@ -183,45 +179,6 @@
         </div>
       </div>
 
-      <!--ADD New Form-->
-
-    <!--<div class="modal fade" tabindex="-1" id="staticBackdrop" data-bs-backdrop="static">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Add Item</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="d-flex justify-content-center">
-              <form class="w-75">
-                  <div class="mb-3">
-                      <label for="cusId" class="form-label">Item Code</label>
-                      <input type="text" class="form-control" id="itemCode">
-                  </div>
-                  <div class="mb-3">
-                      <label for="cusName" class="form-label">Item Name</label>
-                      <input type="text" class="form-control" id="itemName">
-                  </div>
-                  <div class="mb-3">
-                      <label for="cusAddress" class="form-label">Item Price</label>
-                      <input type="text" class="form-control" id="itemPrices">
-                  </div>
-                  <div class="mb-3">
-                      <label for="cusSalary" class="form-label">Item Quantity</label>
-                      <input type="text" class="form-control" id="itemQuantity">
-                  </div>
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-keyboard="false">Close</button>
-            <button type="button" class="btn btn-success">Save</button>
-          </div>
-        </div>
-      </div>
-    </div>-->
-    
     <script src="..\js\bootstrap.js"></script>
 </body>
 </html>
