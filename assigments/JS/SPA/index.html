@@ -24,15 +24,15 @@
               </li>
               <li class="nav-item ml-2" style="margin-left: 5%; width: 90%;">
                 <img src="assets\img\group.png" alt="Logo" width="15" height="15" class="d-inline-block ">
-                <a class="nav-link d-inline-block" href="index.html">Customer</a>
+                <a class="nav-link d-inline-block" id="cusbtn" style="cursor: pointer;">Customer</a>
               </li>
               <li class="nav-item ml-2" style="margin-left: 5%; width: 90%">
                 <img src="assets\img\packaging.png" alt="Logo" width="15" height="15" class="d-inline-block ">
-                <a class="nav-link d-inline-block" href="assets\page\item.html">Item</a>
+                <a class="nav-link d-inline-block" id="itembtn" style="cursor: pointer;">Item</a>
               </li>
               <li class="nav-item ml-2" style="margin-left: 5%; width: 90%">
                 <img src="assets\img\checklist (1).png" alt="Logo" width="15" height="15" class="d-inline-block ">
-                <a class="nav-link d-inline-block" href="assets\page\order.html">Orders</a>
+                <a class="nav-link d-inline-block" id="orderbtn" style="cursor: pointer;">Orders</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -173,9 +173,303 @@
     <!--***********************************************************************************-->
     
     <!--Item Page *******************************************************************************************************-->
+    <!--Main Div-->
+    <div class="container" id="itempage" style="display: none;">
+        <div class="row">
+          <div class="col-12">
+            <div class="row">
+                <div class="col-3 align-self-start fs-4">
+                    <img src="..\img\packaging.png" style="width: 15%;" alt="">
+                  Items
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 ">
+                <div style="border: 2px solid rgb(197, 197, 197); ">
+                    <div class="container-fluid bg-success">
+                        <div class="col-3 align-self-start fs-4" style="font-weight: bold; color: white;">
+                            Item
+                        </div>
+                    </div>
+                    <form class="row g-3 mt-4">
+                        <div class="col-md-9" style="margin-left: 3%;">
+                          <input type="email" placeholder="Input Item Name/Code Here" class="form-control" id="inputEmail4">
+                        </div>
+                
+                        <div class="col-md-4" style="margin-left: 3%;">
+                          <select id="inputState" class="form-select">
+                            <option selected>Name</option>
+                            <option>NIC</option>
+                          </select>
+                        </div>
+                        <div class="col-10" style="margin-left: 3%; margin-bottom: 3%;">
+                          <button type="submit" class="btn btn-primary" style="position: relative; margin-right: 84%;">Search</button>
+                        </div>
+                      </form>
+                </div>
+                
+            </div>
+            <div class="col-6 ">
+                <div class="col-6" style="margin-left: 52%;">
+                    <button type="button" class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="width: 45%;">New Item</button>
+                    <button type="button" class="btn btn-success" style="width: 45%;">View All</button>
+                </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-right: 32%; margin-top: 5%;">
+              <button type="button" class="btn btn-danger">Delete</button>
+              <button type="button" class="btn btn-warning">Update</button>
+              <button type="button" class="btn btn-info">Details</Details></button>
+              <button type="button" class="btn btn-success">Clear</button>
+            </div>
+            <div style=" height: 240px; ">
+                <table class="table table-bordered border" style="margin-top: 5%;">
+                    <thead>
+                      <tr style="border-color: green;">
+                        <th scope="col">Item Code</th>
+                        <th scope="col">Item Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>I001</td>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>I002</td>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>I003</td>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                  </table>
+            </div>
+          </div>
+        </div>
+    </div>
+
+      <!--ADD New Form-->
+
+    <div class="modal fade" tabindex="-1" id="staticBackdrop" data-bs-backdrop="static">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add Item</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex justify-content-center">
+              <form class="w-75">
+                  <div class="mb-3">
+                      <label for="cusId" class="form-label">Item Code</label>
+                      <input type="text" class="form-control" id="itemCode">
+                  </div>
+                  <div class="mb-3">
+                      <label for="cusName" class="form-label">Item Name</label>
+                      <input type="text" class="form-control" id="itemName">
+                  </div>
+                  <div class="mb-3">
+                      <label for="cusAddress" class="form-label">Item Price</label>
+                      <input type="text" class="form-control" id="itemPrices">
+                  </div>
+                  <div class="mb-3">
+                      <label for="cusSalary" class="form-label">Item Quantity</label>
+                      <input type="text" class="form-control" id="itemQuantity">
+                  </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-keyboard="false">Close</button>
+            <button type="button" class="btn btn-success">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--***********************************************************************************-->
+
+    <!--Order Page ******************************************************************************************************-->
+
+    <!--Main Div-->
+
+    <div class="container" id="orderpage" style="display: none;">
+        <div class="row">
+          <div class="col-12">
+            <div class="row">
+                <div class="col-3 align-self-start fs-4">
+                    <img src="..\img\checklist (1).png" style="width: 15%;" alt="">
+                  Order
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 ">
+                <div class="col-12 border border-2">
+                    <div class="col-12 bg-success fs-5" style="font-weight: bold; height: 35px; color: white;">Invoice Details</div>
+                    <div class="col-11 " style="margin: 3%;">
+                        <form>
+                            <div class="mb-3 d-flex flex-row">
+                              <div style="width: 45%;">
+                                <label for="exampleInputEmail1" class="form-label">Order ID : </label>
+                                <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              </div>
+                              <div class="col-5" style="margin-left: 10%; width: 45%;">
+                                <label for="exampleInputEmail1" class="form-label">Date : </label>
+                                <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                              </div>
+                            </div>
+                            <div class="mb-3 d-flex flex-row">
+                                <div style="width: 45%;">
+                                  <label for="exampleInputEmail1" class="form-label">Customer : </label>
+                                  <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div class="col-5" style="margin-left: 10%; width: 45%;">
+                                  <label for="exampleInputEmail1" class="form-label">Customer ID : </label>
+                                  <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                </div>
+                            </div>
+                            <div class="mb-3 d-flex flex-row">
+                                <div style="width: 45%;">
+                                  <label for="exampleInputEmail1" class="form-label">Name : </label>
+                                  <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div class="col-5" style="margin-left: 10%; width: 45%;">
+                                  <label for="exampleInputEmail1" class="form-label">Salary : </label>
+                                  <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                </div>
+                              </div>
+                            <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Address :</label>
+                              <input type="" class="form-control" id="exampleInputPassword1">
+                            </div>
+                          </form>
+                    </div>
+                </div>
+            </div>
+
+            <!--Second Fill Form-->
+
+            <div class="col-6 ">
+                <div class="col-12 border border-2" style="height: 100%;">
+                    <div class="col-12 bg-success fs-5" style="font-weight: bold; height: 35px; color: white;">Item Select</div>
+                    <div class="col-11 " style="margin: 3%;">
+                        <form>
+                            <div class="mb-3 d-flex flex-row">
+                              <div class="col-6">
+                                <label for="exampleInputEmail1" class="form-label">Item : </label>
+                                <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              </div>
+                              <div style="margin-left: 5%; width: 50%;">
+                                <label for="exampleInputEmail1" class="form-label">Item Code : </label>
+                                <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                              </div>
+                            </div>
+                            <div class="mb-3 d-flex flex-row">
+                                <div class="col-5">
+                                  <label for="exampleInputEmail1" class="form-label">Item Name : </label>
+                                  <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div style="margin-left: 5%;">
+                                  <label for="exampleInputEmail1" class="form-label">Price : </label>
+                                  <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                </div>
+                                <div style="margin-left: 5%;">
+                                    <label for="exampleInputEmail1" class="form-label">Qty OnHa : </label>
+                                    <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                  </div>
+                              </div>
+                            <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Order Quantity :</label>
+                              <input type="" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <button type="submit" class="btn btn-warning" style="position: relative; margin-left: 83%;">Add Item</button>
+                          </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+
+          <!--Table Div-->
+
+          <div class="col">
+            <div style=" height: 240px; ">
+                <table class="table table-bordered border" style="margin-top: 5%;">
+                    <thead>
+                      <tr style="border-color: green;">
+                        <th scope="col">Item Code</th>
+                        <th scope="col">Item Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>I001</td>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>I002</td>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>I003</td>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                  </table>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <!--***********************************************************************************-->
+
+
     <script src="assets\js\bootstrap.js"></script>
 
     <script>
+
+        const cuspagebtn = document.querySelector("#cusbtn");
+        const itembtn = document.querySelector("#itembtn");
+        const orderbtn = document.querySelector("#orderbtn");
+
+        const cuspage = document.querySelector("#customerpage");
+        const itempage = document.querySelector("#itempage");
+        const orderpage = document.querySelector("#orderpage");
+
+        cuspagebtn.addEventListener("click",function(){
+            document.querySelector("#customerpage").style.display = 'none';
+            document.querySelector("#itempage").style.display = 'block';
+        });
+
+        itembtn.addEventListener("click",function(){
+            document.querySelector("#customerpage").style.display = 'none';
+            document.querySelector("#itempage").style.display = 'block';
+        });
+
+        orderbtn.addEventListener("click",function(){
+            document.querySelector("#customerpage").style.display = 'none';
+            document.querySelector("#itempage").style.display = 'block';
+        });
 
     </script>
 </body>
