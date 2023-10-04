@@ -86,7 +86,7 @@
             <div class="col-6 ">
                 <div class="col-6" style="margin-left: 52%;">
                     <button type="button" class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="width: 45%;">New Customer</button>
-                    <button type="button" class="btn btn-success" style="width: 45%;">View All</button>
+                    <button id="viewallbtn" type="button" class="btn btn-success" style="width: 45%;">View All</button>
                 </div>
             </div>
           </div>
@@ -98,7 +98,7 @@
               <button type="button" class="btn btn-success">Clear</button>
             </div>
             <div style=" height: 240px; ">
-                <table class="table table-bordered border" style="margin-top: 5%;">
+                <table id="cusdatatable" class="table table-bordered border" style="margin-top: 5%;">
                     <thead>
                       <tr style="border-color: green;">
                         <th scope="col">ID</th>
@@ -164,7 +164,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-keyboard="false">Close</button>
-            <button type="button" class="btn btn-success">Save</button>
+            <button type="button" class="btn btn-success" id="customersavebtn">Save</button>
           </div>
         </div>
       </div>
@@ -497,6 +497,75 @@
                 cuspagebtn.classList.remove("active");
             }
         });
+
+
+        const savebtn = document.querySelector("#customersavebtn");
+        const cusnam = document.querySelector("#cusName");
+        const customerid = document.querySelector("#cusId");
+        const address = document.querySelector("#cusAddress");
+        const Salary = document.querySelector("#cusSalary");
+
+        const customerarr = new Array();
+        const table = document.querySelector("#cusdatatable");
+        const viewallbtn  =  document.querySelector("#viewallbtn");
+        
+
+        savebtn.addEventListener("click",function(){
+
+          var customer={
+
+            nam: cusName.value,
+            cusid: cusId.value,
+            cusnomber: cusAddress.value,
+            cussalry: cusSalary.value,
+  
+            getAll:function(){
+              return customer;
+            }
+  
+          };
+
+          //Data Save
+          customerarr.push(customer);
+          console.log(customerarr);
+
+          //Data Add For Table
+          datarow();
+          
+        });
+
+
+        function datarow(){
+
+          const tr = document.createElement("tr");
+          const td1 = document.createElement("td");
+          const td2 = document.createElement("td");
+          const td3 = document.createElement("td");
+          const td4 = document.createElement("td");
+
+          td1.textContent=cusnam.value;
+          td2.textContent=cusId.value;
+          td3.textContent=cusAddress.value;
+          td4.textContent=cusSalary.value;
+
+          tr.append(td1,td2,td3,td4);
+          document.querySelector("#cusdatatable").append(tr);
+
+        }
+
+
+        //View All Customer
+
+        viewallbtn.addEventListener("click",function(){
+          getAllData();
+        });
+
+        function getAllData(){
+          for(cus in customerarr){
+            console.log(customerarr[cus]);
+          }
+        }
+
 
     </script>
 </body>
