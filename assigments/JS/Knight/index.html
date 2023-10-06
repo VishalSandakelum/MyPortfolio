@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knight</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    
+    <style>
+        section:nth-child(2){
+            position: absolute;
+            top: 60%;
+            left: 0%;
+            right: 0%;
+            bottom: 0%;
+            margin: auto;
+            width: fit-content;
+            height: 10%;
+        }
+
+        div:nth-child(1)>div{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container border border-2 border-black col-10 position-absolute top-0 bottom-0 m-auto" style="height: 15%; left: 0%; right: 0%;">
+        <div class="row position-relative h-100">
+            <div class="col-2 h-100 position-relative" style="border-right: 2px solid black;"></div>
+            <div class="col-2 h-100 position-relative" style="border-right: 2px solid rgb(0, 0, 0);"></div>
+            <div class="col-2 h-100 position-relative" style="border-right: 2px solid black;"></div>
+            <div class="col-2 h-100 position-relative" style="border-right: 2px solid black;"></div>
+            <div class="col-2 h-100 position-relative" style="border-right: 2px solid black;"></div>
+            <div class="col-2 h-100 position-relative" style="border-right: 0px solid black;"></div>
+        </div>
+    </div>
+
+    <section>
+        <button id="startbtn" type="button" class="btn btn-primary">Start</button>
+        <button id="stopbtn" type="button" class="btn btn-danger">Stop</button>
+    </section>
+
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <script>
+        let interval;
+        let secinterval;
+        const alldiv = document.querySelectorAll('body>div>div>div');
+        const colorArr = new Array('red','white','white','white','white','white');
+        const colorArrforreverse = new Array('white','white','white','white','white','red');
+        
+        rightsidepattern();
+
+        function rightsidepattern(){
+            interval = setInterval(function(){
+                for(i in colorArr){
+                    alldiv[i].style.backgroundColor = colorArr[i];
+                }
+                colorArr.unshift(colorArr[5]);
+                colorArr.pop();
+    
+                if(colorArr[5]==='red'){
+                    clearInterval(interval);
+                    leftsidepattern();
+                }
+            },100);
+        }
+
+        function leftsidepattern(){
+            secinterval = setInterval(function(){
+                for(let i = 5; i>0; i--){
+                    alldiv[i].style.backgroundColor = colorArrforreverse[i];
+                }
+                colorArrforreverse.push(colorArrforreverse[0]);
+                colorArrforreverse.shift();
+
+                if(colorArrforreverse[0]==='red'){
+                    clearInterval(secinterval);
+                    rightsidepattern();
+                }
+            },100);
+        }
+        console.log('hi');
+    </script>
+</body>
+</html>
