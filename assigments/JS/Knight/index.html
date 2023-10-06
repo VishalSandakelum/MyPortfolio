@@ -41,46 +41,79 @@
         <button id="stopbtn" type="button" class="btn btn-danger">Stop</button>
     </section>
 
+    <audio id="music" src="assets/mp3/Knight.mp3" loop></audio>
+
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/jquery-3.7.1.min.js"></script>
 
     <script>
-        let interval;
-        let secinterval;
+        let firstinterval;
+        let secondinterval;
         const alldiv = document.querySelectorAll('body>div>div>div');
         const colorArr = new Array('red','white','white','white','white','white');
         const colorArrforreverse = new Array('white','white','white','white','white','red');
-        
-        rightsidepattern();
 
+        const startbtn = $('#startbtn');
+        const stopbtn = $('#stopbtn');
+
+        const music = document.querySelector('#music');
+        
+        startbtn.click(function(){
+            clearInterval(firstinterval);
+            setTimeout(function(){
+                rightsidepattern();
+            },100);
+
+            music.play();
+        });
+
+        stopbtn.click(function(){
+            clearInterval(secondinterval);
+            clearInterval(firstinterval);
+
+            music.pause();
+        });
+
+        //This Function For Change Color (left to Right) 
         function rightsidepattern(){
-            interval = setInterval(function(){
+            clearInterval(firstinterval);
+            firstinterval = setInterval(function(){
                 for(i in colorArr){
                     alldiv[i].style.backgroundColor = colorArr[i];
                 }
-                colorArr.unshift(colorArr[5]);
-                colorArr.pop();
-    
+
                 if(colorArr[5]==='red'){
-                    clearInterval(interval);
-                    leftsidepattern();
+                    clearInterval(firstinterval);
+                    setTimeout(function(){
+                        clearInterval(secondinterval);
+                        leftsidepattern();
+                    },100);
                 }
-            },100);
+
+                colorArr.unshift(colorArr[5]);
+                colorArr.pop();  
+            },40);
         }
 
+        //This Function For Change Color (Right to Left)
         function leftsidepattern(){
-            secinterval = setInterval(function(){
+            clearInterval(secondinterval);
+            secondinterval = setInterval(function(){
                 for(let i = 5; i>0; i--){
                     alldiv[i].style.backgroundColor = colorArrforreverse[i];
                 }
-                colorArrforreverse.push(colorArrforreverse[0]);
-                colorArrforreverse.shift();
 
                 if(colorArrforreverse[0]==='red'){
-                    clearInterval(secinterval);
-                    rightsidepattern();
+                    clearInterval(secondinterval);
+                    setTimeout(function(){
+                        clearInterval(firstinterval);
+                        rightsidepattern();
+                    },100);
                 }
-            },100);
+
+                colorArrforreverse.push(colorArrforreverse[0]);
+                colorArrforreverse.shift();
+            },40);
         }
         console.log('hi');
     </script>
