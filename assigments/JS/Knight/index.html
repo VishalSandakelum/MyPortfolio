@@ -137,8 +137,8 @@
         const speed = $('#speed');
         const waitingtime = $('#waitingtime');
         const alldiv = document.querySelectorAll('body>div>div>div');
-        const colorArr = new Array('red','white','white','white','white','white');
-        const colorArrforreverse = new Array('white','white','white','white','white','red');
+        const colorArr = new Array('red','white','white','white','white','rgb(255, 139, 139)');
+        const colorArrforreverse = new Array('rgb(255, 139, 139)','white','white','white','white','red');
 
         let setSpeed = 100;
         let setWaitingTime = 1000;
@@ -156,6 +156,7 @@
         startbtn.click(function(){
             clearInterval(firstinterval);
             clearTimeout(firsttimeout);
+            
             firsttimeout = setTimeout(function(){
                 rightsidepattern();
             },setWaitingTime);
