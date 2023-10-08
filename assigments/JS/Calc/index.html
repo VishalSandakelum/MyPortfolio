@@ -214,6 +214,12 @@
         const display1 = $('#numbermaindisplay');
         const display2 = $('#numberseconddisplay');
 
+        //For Store Display All Number
+        const AllnumberArr = new Array();
+
+        //For Store Display All Arithmatic
+        const Allarithmatic = new Array();
+
         clearbtn.click(function(){
             setbtnAnima(clearbtn);
 
@@ -301,6 +307,10 @@
                 const newtext = removeLastCharacter();
                 display1.text(newtext+`${'+'}`);
             }
+            Allarithmatic.push("+");
+            console.log(Allarithmatic);
+
+            getNumber();
         });
 
         minusbtn.click(function(){
@@ -312,6 +322,10 @@
                 const newtext = removeLastCharacter();
                 display1.text(newtext+`${'-'}`);
             }
+            Allarithmatic.push("-");
+            console.log(Allarithmatic);
+
+            getNumber();
         });
 
 
@@ -324,6 +338,10 @@
                 const newtext = removeLastCharacter();
                 display1.text(newtext+`${'/'}`);
             }
+            Allarithmatic.push("/");
+            console.log(Allarithmatic);
+
+            getNumber();
         });
 
         decimalbtn.click(function(){
@@ -339,6 +357,8 @@
 
         equalbtn.click(function(){
             setbtnAnima(equalbtn);
+
+            getNumber();
         });
 
         multiplicationbtn.click(function(){
@@ -350,6 +370,10 @@
                 const newtext = removeLastCharacter();
                 display1.text(newtext+`${'*'}`);
             }
+            Allarithmatic.push("*");
+            console.log(Allarithmatic);
+
+            getNumber();
         });
 
         //This Function Cretae For Set Animation When Click the Button
@@ -380,7 +404,7 @@
             }
         }
 
-        //This Function For When Click the Some Arithmatic Button ,Alredy type or not Some Arithmatic Button
+        //This Function For When Click the Some Arithmatic Button ,Check Alredy type or not Some Arithmatic Button
         function checkLastCharacter(){
             const text = display1.text();
             const ArithmaticArr = new Array('+','-','/','*','.');
@@ -401,13 +425,40 @@
             return valide;
         }
 
-        /*This Function For , If Alredy TYPE Some Arithmatic Option And Again Clcik Some Arithmatic Button , 
+        /*This Function For , If Alredy TYPE Some Arithmatic Option And when Click Again Arithmatic Buttons , 
         For Remove the First Arithmatic Option */
         function removeLastCharacter(){
             const text = display1.text();
             const newText = text.slice(0, -1);
             
+            AllnumberArr.pop();
+            Allarithmatic.pop();
+
             return newText;
+        }
+
+        //This Function For When Click Some Arithmatic Button Or Equal Button , Get Last Number and It Add For Array
+        function getNumber(){
+            const displaynum = display1.text();
+            const tokens = displaynum.split(/[-+*/]/);
+
+            // Remove any empty strings from the array
+            const filteredTokens = tokens.filter(token => token !== "");
+
+            if (filteredTokens.length > 0) {
+                // Get the last token, which should be the last number
+                const lastToken = filteredTokens[filteredTokens.length - 1];
+                AllnumberArr.push(lastToken);
+            }
+
+            console.log(AllnumberArr);
+
+        }
+
+        function getAnswer(){
+            for(i in AllnumberArr){
+                //AllnumberArr
+            }
         }
     </script>
 </body>
