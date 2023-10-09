@@ -359,6 +359,7 @@
             setbtnAnima(equalbtn);
 
             getNumber();
+            getAnswer();
         });
 
         multiplicationbtn.click(function(){
@@ -456,8 +457,44 @@
         }
 
         function getAnswer(){
-            for(i in AllnumberArr){
-                //AllnumberArr
+            let operator = '-';
+            let answer;
+            let boolean = true;
+
+            if(Allarithmatic[0]==='+'){
+                answer = parseInt(AllnumberArr[0]) + parseInt(AllnumberArr[1]);
+            }else if(Allarithmatic[0]==='-'){
+                answer = parseInt(AllnumberArr[0]) - parseInt(AllnumberArr[1]);
+            }else if(Allarithmatic[0]==='*'){
+                answer = parseInt(AllnumberArr[0]) * parseInt(AllnumberArr[1]);
+            }else if(Allarithmatic[0]==='/'){
+                answer = parseInt(AllnumberArr[0]) / parseInt(AllnumberArr[1]);
+            }
+
+            AllnumberArr.shift();
+            AllnumberArr.shift();
+            Allarithmatic.shift();
+
+            while(boolean){
+                if(AllnumberArr.length===1){
+                    if(Allarithmatic[0]==='+'){
+                        answer = parseInt(answer) + parseInt(AllnumberArr[0]);
+                    }else if(Allarithmatic[0]==='-'){
+                        answer = parseInt(answer) - parseInt(AllnumberArr[0]);
+                    }else if(Allarithmatic[0]==='*'){
+                        answer = parseInt(answer) * parseInt(AllnumberArr[0]);
+                    }else if(Allarithmatic[0]==='/'){
+                        answer = parseInt(answer) / parseInt(AllnumberArr[0]);
+                    }
+                    
+                    AllnumberArr.shift();
+                    AllnumberArr.shift();
+                    Allarithmatic.shift();
+                }else{
+                    boolean = false;
+                    console.log(answer);
+                    return answer;
+                }
             }
         }
     </script>
