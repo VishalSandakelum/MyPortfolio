@@ -360,7 +360,11 @@
         equalbtn.click(function(){
             setbtnAnima(equalbtn);
             
-            getNumber();
+            if(checkLastCharacter()){
+                getNumber();
+            }else{
+                AllnumberArr.push(0);
+            }
             getAnswer();
         });
 
