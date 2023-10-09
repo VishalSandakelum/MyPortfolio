@@ -7,7 +7,16 @@
 
     <link rel="stylesheet" href="assets\css\bootstrap.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Concert+One&family=Dongle:wght@700&family=Exo+2:wght@600&family=Inter&family=Roboto+Mono&family=Rubik&family=Sora:wght@600&family=Source+Code+Pro:wght@800&family=Staatliches&display=swap" rel="stylesheet">
     <style>
+
+        body{
+            background: url('assets/img/mesh-757.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
         
         /*Main section*/
         section{
@@ -70,7 +79,7 @@
 <body>
 
     <!--Main Section-->
-    <section class="rounded-5 border border-3 border-black position-absolute">
+    <section class="rounded-5 border border-3 border-black position-absolute" style="background-color: white;">
         <!--Main Section For Calculator-->
         <div class="w-100 h-100 position-relative">
             <!-- Display -->
@@ -182,6 +191,30 @@
             
         </div>
     </section>
+
+    <section id="loginpage" style="background-color: white; position: relative; width: 100%; height: 100vh; left: 0%;">
+        <hgroup style="font-family: 'Concert One', cursive; position: absolute; top: 5%; left: 15%; text-align: center; left: 30%;">
+            <h1 style="font-size: 55px;">Welcome to our site</h1>
+            <h1 style="color: #FF782A; font-size: 40px;">School Calculator</h1>
+            <h1 style="color: #FF782A; font-size: 40px;">Company Website</h1>
+        </hgroup>
+        <p style="font-size: 20px; position: absolute; top: 45%; left: 7%;">
+            Introducing our user-friendly online calculator designed to empower <br> 
+            students with quick and efficient mathematical solutions. <br>
+            Our sleek and intuitive interface provides a seamless experience,allowing<br>
+            students to effortlessly perform arithmetic, algebraic, and scientific calculations.<br>
+            Whether you're tackling complex equations or simply need to verify your math homework,<br>
+            our calculator is your trusted companion. With a wide range of functions<br>
+            and an easy-to-navigate layout, math has never been more accessible.<br> 
+            Enhance your learning journey with our online calculator and simplify <br> 
+            your mathematical challenges today.
+        </p>
+        <aside style="position: absolute; right: 0%; top: 25%;">
+            <img style="width: 80%;" src="assets/img/calcsit.gif" alt="">
+        </aside>
+
+        <button id="getstartedbtn" style="width: 20%; height: 5%; position: absolute; top: 85%; left: 7%;" type="button" class="btn btn-outline-success">Get Started</button>
+    </section>
     
     <script src="assets\js\bootstrap.js"></script>
     <script src="assets/js/jquery-3.7.1.min.js"></script>
@@ -214,6 +247,8 @@
 
         const display1 = $('#numbermaindisplay');
         const display2 = $('#numberseconddisplay');
+
+        const getstartedbtn = $('#getstartedbtn');
 
         //For Store Display All Number
         const AllnumberArr = new Array();
@@ -514,6 +549,11 @@
             display1.text(finalanswer);
         }
 
+        getstartedbtn.click(function(){
+            const loginpage = $('#loginpage');
+
+            loginpage.css('display','none');
+        });
     </script>
 </body>
 </html>
