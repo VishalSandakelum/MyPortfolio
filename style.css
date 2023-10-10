@@ -9,8 +9,28 @@
     height: 100vh; 
     position: fixed; 
     top: 0%; 
-    background-color: blue; 
+    background-color: rgb(255, 255, 255); 
     z-index: 2000;
+}
+
+#loadingpage>img:nth-child(1){
+    position: absolute;
+    width: 20%;
+    top: 20%;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+    z-index: 100;
+}
+
+#loadingpage>img:nth-child(2){
+    position: absolute;
+    width: 50%;
+    top: 20%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    margin: auto;
 }
 
 header{
@@ -1464,6 +1484,10 @@ footer>aside>img{
         position: fixed;
     }
 
+    #loadingpage>img:nth-child(1){
+        top: 49%;
+    }
+
     #logoimg{
         position: relative;
         margin-top: 40%;
@@ -2251,6 +2275,10 @@ footer>aside>img{
         position: fixed;
     }
 
+    #loadingpage>img:nth-child(1){
+        top: 48%;
+    }
+
     #logoimg{
         position: relative;
         margin-top: 40%;
@@ -3035,6 +3063,10 @@ footer>aside>img{
     
     header{
         height: 7vh;
+    }
+
+    #loadingpage>img:nth-child(1){
+        top: 39%;
     }
 
     #logoimg{
@@ -3852,6 +3884,10 @@ footer>aside>img{
     /*Header*/
     header{
         height: 7vh;
+    }
+
+    #loadingpage>img:nth-child(1){
+        top: 39%;
     }
 
     #logoimg{
