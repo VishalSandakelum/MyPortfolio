@@ -133,6 +133,19 @@ main{
     right: 4%;
     max-width: 80%;
     height: auto;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: imgAnima;
+    animation-direction: alternate;
+}
+
+@keyframes imgAnima{
+    0%{
+        top: 14%;
+    }
+    100%{
+        top: 16%;
+    }
 }
 
 .myimg1>img{
@@ -233,6 +246,102 @@ main{
     width: fit-content;
     right: 8%;
     bottom: 150px;
+}
+
+.leftsidebuttonsection{
+    position: fixed;
+    height: 28%;
+    top: 35%;
+    right: 1%;
+    width: 3%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15%;
+}
+
+.leftsidebuttonsection>h4{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+}
+
+.leftsidebuttonsection>button{
+    position: relative;
+    width: 100%;
+    height: calc(100%/3);
+    border-radius: 100%;
+    border: 2px solid black;
+    background-color: transparent;
+}
+
+.leftsidebuttonsection>button:nth-child(1){
+    background: url('assets/img/like.png');
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: none;
+}
+
+.leftsidebuttonsection>button:nth-child(3){
+    background: url('assets/img/like\ 1.png');
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: none;
+}
+
+.leftsidebuttonsection>button:nth-child(5){
+    background: url('assets/img/like\ \(1\).png');
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: none;
+}
+
+.leftsidebuttonsection>h4:nth-child(2){
+    top: 24%;
+    font-family: 'sora';
+    font-weight: 400;
+}
+
+.leftsidebuttonsection>h4:nth-child(4){
+    top: 63%;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+}
+
+.leftsidebuttonsection>h4:nth-child(6){
+    top: 103%;
+    font-family: 'sora';
+    font-weight: 400;
+}
+
+.leftsidebuttonsection>button:nth-child(1):hover{
+    transition: all;
+    background-color: rgb(81, 145, 223);
+    width: 104%;
+    height: calc(100%/2.8);
+    box-shadow: 0px 4px 4px rgba(128, 130, 132, 0.8) ;
+}
+
+.leftsidebuttonsection>button:nth-child(3):hover{
+    transition: all;
+    background-color: gray;
+    width: 104%;
+    height: calc(100%/2.8);
+    box-shadow: 0px 4px 4px rgba(128, 130, 132, 0.8) ;
+}
+
+.leftsidebuttonsection>button:nth-child(5):hover{
+    transition: all;
+    background-color: rgb(237, 28, 178);
+    width: 104%;
+    height: calc(100%/2.8);
+    box-shadow: 0px 4px 4px rgba(128, 130, 132, 0.8) ;
 }
 
 /*Second Page*/

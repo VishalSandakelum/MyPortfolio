@@ -7,5 +7,5 @@ window.addEventListener('load', function() {
             loadingpage.style.display = 'none';
         }, 2000); 
         console.log('Window is fully loaded');
-    }, 500);
+    }, 700);
 });
