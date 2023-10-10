@@ -312,6 +312,8 @@ main{
     left: 0%;
     right: 0%;
     margin: auto;
+    font-family: 'sora';
+    font-weight: 400;
 }
 
 .leftsidebuttonsection>h4:nth-child(6){
@@ -1780,6 +1782,22 @@ footer>aside>img{
         height: 60vh;
     }
 
+    .leftsidebuttonsection{
+        height: 14%;
+        top: 45%;
+        right: 1%;
+        width: 4%;
+    }
+
+    .leftsidebuttonsection>h4{
+        font-size: 10px;
+    }
+
+    .leftsidebuttonsection>h4:nth-child(4){
+        font-size: 10px;
+        left: 26%;
+    }
+
     /*Second Page*/
 
     #mainsectionthree{
@@ -2569,6 +2587,22 @@ footer>aside>img{
         left: 7%;
         width: fit-content;
         height: 60vh;
+    }
+
+    .leftsidebuttonsection{
+        height: 14%;
+        top: 45%;
+        right: 1%;
+        width: 4%;
+    }
+
+    .leftsidebuttonsection>h4{
+        font-size: 10px;
+    }
+
+    .leftsidebuttonsection>h4:nth-child(4){
+        font-size: 10px;
+        left: 26%;
     }
 
     /*Second Page*/
