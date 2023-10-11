@@ -13,23 +13,15 @@
         //This Function For When Click The Save Button Save All Customer Details
         savebtn.addEventListener("click",function(){
 
-          var customer={
+          let newCustomer = Object.assign({},Customer);
 
-            nam: cusnam.value,
-            cusid: customerid.value,
-            cusnomber: address.value,
-            cussalry: Salary.value,
-  
-            getAll:function(){
-              return customer;
-            }
-  
-          };
+          newCustomer.cusid = customerid.value;
+          newCustomer.nam = cusnam.value;
+          newCustomer.cusnomber = address.value;
+          newCustomer.cussalry = Salary.value;
 
           //Data Save
-          customerarr.push(customer);
-          console.log(customerarr);
-
+          customerAr.push(newCustomer);
           //Data Add For Table
           datarow();
           
@@ -61,7 +53,7 @@
         });
 
         function getAllData(){
-          for(cus in customerarr){
-            console.log(customerarr[cus]);
+          for(i in customerAr){
+            console.log(customerAr[i]);
           }
         }
