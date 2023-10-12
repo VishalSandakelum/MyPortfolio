@@ -67,7 +67,7 @@
                     </div>
                     <form class="row g-3 mt-4">
                         <div class="col-md-9" style="margin-left: 3%;">
-                          <input type="email" placeholder="Input Name/Nic/Tp" class="form-control" id="inputEmail4">
+                          <input id="cusinputfield" type="email" placeholder="Input Name/Nic/Tp" class="form-control" id="inputEmail4">
                         </div>
                 
                         <div class="col-md-4" style="margin-left: 3%;">
@@ -92,7 +92,7 @@
           </div>
           <div class="col">
             <div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-right: 32%; margin-top: 5%;">
-              <button type="button" class="btn btn-danger">Delete</button>
+              <button id="deletebtn" type="button" class="btn btn-danger">Delete</button>
               <button type="button" class="btn btn-warning">Update</button>
               <button type="button" class="btn btn-info">Details</Details></button>
               <button type="button" class="btn btn-success">Clear</button>
@@ -445,11 +445,10 @@
 
 
     <script src="assets\js\bootstrap.js"></script>
+    <script src="assets\js\jquery-3.7.1.min.js"></script>
     <script src="model/Customer_model.js"></script>
     <script src="db/DB.js"></script>
     <script src="controllers/CustomerController.js"></script>
-
-    <script src="assets\js\jquery-3.7.1.min.js"></script>
     <script>
 
         const cuspagebtn = document.querySelector("#cusbtn");

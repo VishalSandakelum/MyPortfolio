@@ -36,6 +36,12 @@
           getAllData();
         });
 
+        $('#deletebtn').click(function(){
+          let id = $('#cusinputfield').val();
+          console.log(id);
+          deleteCustomer();
+        });
+
         //This Function For When Click Some Row Show The Update Form With They Row Value
         function showSaveForm(){
           modal.show();
@@ -57,6 +63,13 @@
             Salary.value = salary;
             
             showSaveForm();
+          });
+        }
+
+        function deleteCustomer(){
+          $('#cusdatatable tr').dblclick(function () {
+            
+            console.log("double click");
           });
         }
 
@@ -85,5 +98,4 @@
 
           $("#cusdatatable").append(row);
           setClickeventForTable();
-          
         }
