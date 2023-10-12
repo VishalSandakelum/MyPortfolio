@@ -34,10 +34,28 @@
           getAllData();
         });
 
+        //
+        function setClickeventForTable(){
+          $('#cusdatatable tr').click(function () {
+            
+            let id = $(this).children().eq(0).text();
+            let name = $(this).children().eq(1).text();
+            let address = $(this).children().eq(2).text();
+            let salary = $(this).children().eq(3).text();
+    
+            console.log(id,name);
+            customerid.innerText = id;
+            cusnam.innerText = name;
+            address.innerText = address;
+            salary.innerText = salary;
+          });
+        }
+
+        //This Function For Get All Data From Array
         function getAllData(){
           for(i in customerAr){
             console.log(customerAr[i]);
-            let custId = customerAr[i].cusId;
+            let custId = customerAr[i].cusid;
             let custnam = customerAr[i].name;
             let custnom = customerAr[i].cusnomber;
             let custsal = customerAr[i].cussalry;
@@ -49,20 +67,14 @@
         //This Function For All Data Add Add To The Table
         function datarow(id,nam,nomb,sal){
 
-          const tr = document.createElement("tr");
-          const td1 = document.createElement("td");
-          const td2 = document.createElement("td");
-          const td3 = document.createElement("td");
-          const td4 = document.createElement("td");
+          let row = `<tr>
+                      <td>${id}</td>
+                      <td>${nam}</td>
+                      <td>${nomb}</td>
+                      <td>${sal}</td>
+                    </tr>`;
 
-          td1.textContent = id;
-          td2.textContent = nam;
-          td3.textContent = nomb;
-          td4.textContent = sal;
-
-          $('#cusdatatable').addClass("table");
-          tr.append(td1,td2,td3,td4);
-          $('#cusdatatable').append(tr);
-          document.querySelector("#cusdatatable").append(tr);
-
+          $("#cusdatatable").append(row);
+          setClickeventForTable();
+          
         }
