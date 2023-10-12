@@ -67,10 +67,7 @@
         }
 
         function deleteCustomer(){
-          $('#cusdatatable tr').dblclick(function () {
-            
-            console.log("double click");
-          });
+          console.log("double click");
         }
 
         //This Function For Get All Data From Array
