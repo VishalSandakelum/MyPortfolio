@@ -1,8 +1,8 @@
-var Customer={
+let Customer={
 
-    name: '',
-    cusid: '',
-    cusnomber: '',
-    cussalry: ''
+    name: "",
+    cusid: "",
+    cusnomber: "",
+    cussalry: ""
 
   };

@@ -16,7 +16,7 @@
           let newCustomer = Object.assign({},Customer);
 
           newCustomer.cusid = customerid.value;
-          newCustomer.nam = cusnam.value;
+          newCustomer.name = cusnam.value;
           newCustomer.cusnomber = address.value;
           newCustomer.cussalry = Salary.value;
 
@@ -24,10 +24,22 @@
           customerAr.push(newCustomer);
           //Data Add For Table
           datarow();
+          console.log(customerAr);
           
         });
 
+        //This Function For View All Customer
+        viewallbtn.addEventListener("click",function(){
+          getAllData();
+        });
 
+        function getAllData(){
+          for(i in customerAr){
+            console.log(customerAr[i]);
+          }
+        }
+
+        //This Function For All Data Add Add To The Table
         function datarow(){
 
           const tr = document.createElement("tr");
@@ -44,16 +56,4 @@
           tr.append(td1,td2,td3,td4);
           document.querySelector("#cusdatatable").append(tr);
 
-        }
-
-
-        //This Function For View All Customer
-        viewallbtn.addEventListener("click",function(){
-          getAllData();
-        });
-
-        function getAllData(){
-          for(i in customerAr){
-            console.log(customerAr[i]);
-          }
         }
