@@ -10,6 +10,8 @@
         const table = document.querySelector("#cusdatatable");
         const viewallbtn  =  document.querySelector("#viewallbtn");
 
+        const modal = new bootstrap.Modal(document.querySelector("#cusstaticBackdrop"), {});
+
         //This Function For When Click The Save Button Save All Customer Details
         savebtn.addEventListener("click",function(){
 
@@ -34,20 +36,27 @@
           getAllData();
         });
 
-        //
+        //This Function For When Click Some Row Show The Update Form With They Row Value
+        function showSaveForm(){
+          modal.show();
+        }
+
+        //This Function For Set Click Action For Table Row, When Click They Row Get The Data From they Row And Set Data To The Save Form Field 
         function setClickeventForTable(){
           $('#cusdatatable tr').click(function () {
             
             let id = $(this).children().eq(0).text();
             let name = $(this).children().eq(1).text();
-            let address = $(this).children().eq(2).text();
+            let addres = $(this).children().eq(2).text();
             let salary = $(this).children().eq(3).text();
     
-            console.log(id,name);
-            customerid.innerText = id;
-            cusnam.innerText = name;
-            address.innerText = address;
-            salary.innerText = salary;
+            console.log(address,salary);
+            customerid.value = id;
+            cusnam.value = name;
+            address.value = addres;
+            Salary.value = salary;
+            
+            showSaveForm();
           });
         }
 
