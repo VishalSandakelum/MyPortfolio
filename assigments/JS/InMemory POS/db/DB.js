@@ -4,8 +4,8 @@ let customerAr = [
     {name: 'Amal',cusid: 'C00-003',cusnomber: '+94 76 2656 420',cussalry: '150000.00'}
 ];
 
-let item = new Array(
+let item = [
     {itmcode: 'I00-001',itmname: 'Sun Light',itmprice: '150',itmqty: '50'},
     {itmcode: 'I00-002',itmname: 'Signal',itmprice: '180',itmqty: '60'},
     {itmcode: 'I00-003',itmname: 'Milk Packet',itmprice: '550',itmqty: '60'}
-);
+];

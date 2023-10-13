@@ -21,6 +21,14 @@ $('#itmviewallbtn').click(function(){
     updateItem($('#itemCode').val());
  });
 
+ $('#itmdeletebtn').click(function(){
+    let itmCODE = $('#itmCODfield').val();
+    deleteItem(itmCODE);
+    $('#itmCODfield').val('');
+    $('#itmtable td').parent().remove();
+    getAllDataitm();
+ });
+
  //This Function For Set Click Action For Table Row, When Click They Row Get The Data From they Row And Set Data To The Save Form Field 
  function setitmClickeventForTable(){
     $('#itmtable tr').click(function () {
@@ -35,7 +43,7 @@ $('#itmviewallbtn').click(function(){
       $('#itemQuantity').val(itmqty);
       $('#itemPrices').val(itmprice);
       
-      $('#itemCode').disabled = true;
+      document.querySelector('#itemCode').disabled = true;
 
       showitmSaveForm();
     });
@@ -93,7 +101,7 @@ $('#itmviewallbtn').click(function(){
   function deleteItem(CODE){
     let newArray = [];
 
-    if(checkID(CODE)){
+    if(checkitemCODE(CODE)){
       for(i in item){
         if(CODE===item[i].itmcode){
         }else{
@@ -105,5 +113,16 @@ $('#itmviewallbtn').click(function(){
       console.log(item);
     }else{
       alert("Something Wrong, Please check & enter correct Item CODE !");
+    }
+  }
+
+  //This Function For Check the Input CODE Alredy Exicts OR Not
+  function checkitemCODE(CODE){
+    for(i in item){
+      if(CODE===item[i].itmcode){
+        return true;
+      }else{
+        return false;
+      }
     }
   }
