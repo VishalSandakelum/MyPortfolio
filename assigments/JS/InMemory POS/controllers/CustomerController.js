@@ -39,7 +39,8 @@
         $('#deletebtn').click(function(){
           let id = $('#cusinputfield').val();
           console.log(id);
-          deleteCustomer();
+          deleteCustomer(id);
+          $('#cusinputfield').val('');
         });
 
         //This Function For When Click Some Row Show The Update Form With They Row Value
@@ -64,10 +65,6 @@
             
             showSaveForm();
           });
-        }
-
-        function deleteCustomer(){
-          console.log("double click");
         }
 
         //This Function For Get All Data From Array
@@ -95,4 +92,32 @@
 
           $("#cusdatatable").append(row);
           setClickeventForTable();
+        }
+
+        function deleteCustomer(ID){
+          let newArray = [];
+
+          if(checkID(ID)){
+            for(i in customerAr){
+              if(ID===customerAr[i].cusid){
+              }else{
+                newArray.push(customerAr[i]);
+              }
+            }
+            customerAr = newArray;
+            alert("Successfully Customer Deleted");
+            console.log(customerAr);
+          }else{
+            alert("Something Wrong, Please check & enter correct ID !");
+          }
+        }
+
+        function checkID(ID){
+          for(i in customerAr){
+            if(ID===customerAr[i].cusid){
+              return true;
+            }else{
+              return false;
+            }
+          }
         }
