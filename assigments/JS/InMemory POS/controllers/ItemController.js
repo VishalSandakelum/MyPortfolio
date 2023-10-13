@@ -1,3 +1,5 @@
+const modaltwo = new bootstrap.Modal(document.querySelector("#staticBackdropitem"), {});
+
 $('#itemsavebtn').click(function(){
     let newItem = Object.assign({},Item);
 
@@ -12,11 +14,31 @@ $('#itemsavebtn').click(function(){
 //This Function For View All Item
 $('#itmviewallbtn').click(function(){
     $('#itmtable td').parent().remove();
-    getAllData();
+    getAllDataitm();
  });
 
+ //This Function For Set Click Action For Table Row, When Click They Row Get The Data From they Row And Set Data To The Save Form Field 
+ function setitmClickeventForTable(){
+    $('#itmtable tr').click(function () {
+      
+      let itmcode = $(this).children().eq(0).text();
+      let itmname = $(this).children().eq(1).text();
+      let itmprice = $(this).children().eq(2).text();
+      let itmqty = $(this).children().eq(3).text();
+
+      $('#itemCode').val(itmcode);
+      $('#itemName').val(itmname);
+      $('#itemQuantity').val(itmqty);
+      $('#itemPrices').val(itmprice);
+      
+      $('#itemCode').disabled = true;
+
+      showitmSaveForm();
+    });
+  }
+
  //This Function For Get All Data From Array
- function getAllData(){
+ function getAllDataitm(){
     for(i in item){
       console.log(item[i]);
       let itmcode = item[i].itmcode;
@@ -24,12 +46,12 @@ $('#itmviewallbtn').click(function(){
       let itmqty = item[i].itmqty;
       let itmprice = item[i].itmprice;
 
-      datarow(itmcode,itmname,itmqty,itmprice);
+      datarowitm(itmcode,itmname,itmqty,itmprice);
     }
   }
 
   //This Function For All Data Add Add To The Table
-  function datarow(itmcode,itmname,itmqty,itmprice){
+  function datarowitm(itmcode,itmname,itmqty,itmprice){
 
     let row = `<tr>
                 <td>${itmcode}</td>
@@ -39,5 +61,9 @@ $('#itmviewallbtn').click(function(){
               </tr>`;
 
     $("#itmtable").append(row);
-    setClickeventForTable();
+    setitmClickeventForTable();
+  }
+
+  function showitmSaveForm(){
+    modaltwo.show();
   }
