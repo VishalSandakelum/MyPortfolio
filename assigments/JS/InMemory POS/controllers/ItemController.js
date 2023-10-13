@@ -88,3 +88,22 @@ $('#itmviewallbtn').click(function(){
       $('#itmtable td').parent().remove();
       getAllDataitm();
   }
+
+  //This Function For Delete Item From Array
+  function deleteItem(CODE){
+    let newArray = [];
+
+    if(checkID(CODE)){
+      for(i in item){
+        if(CODE===item[i].itmcode){
+        }else{
+          newArray.push(item[i]);
+        }
+      }
+      item = newArray;
+      alert("Successfully Item Deleted");
+      console.log(item);
+    }else{
+      alert("Something Wrong, Please check & enter correct Item CODE !");
+    }
+  }
