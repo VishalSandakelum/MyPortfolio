@@ -1,14 +1,18 @@
 const modaltwo = new bootstrap.Modal(document.querySelector("#staticBackdropitem"), {});
 
 $('#itemsavebtn').click(function(){
-    let newItem = Object.assign({},Item);
+    if(checkitemCODE($('#itemCode').val())){
+        alert("OOPS , Alredy Exicts this Item CODE , Please enter any Item CODE !");
+    }else{
+        let newItem = Object.assign({},Item);
 
-    newItem.itmcode = $('#itemCode').val();
-    newItem.itmname = $('#itemName').val();
-    newItem.itmqty = $('#itemQuantity').val();
-    newItem.itmprice = $('#itemPrices').val();
+        newItem.itmcode = $('#itemCode').val();
+        newItem.itmname = $('#itemName').val();
+        newItem.itmqty = $('#itemQuantity').val();
+        newItem.itmprice = $('#itemPrices').val();
 
-    item.push(newItem);
+        item.push(newItem);
+    }
 });
 
 //This Function For View All Item
