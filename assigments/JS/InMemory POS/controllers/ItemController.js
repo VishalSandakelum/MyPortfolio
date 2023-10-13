@@ -17,6 +17,10 @@ $('#itmviewallbtn').click(function(){
     getAllDataitm();
  });
 
+ $('#itemupdatebtn').click(function(){
+    updateItem($('#itemCode').val());
+ });
+
  //This Function For Set Click Action For Table Row, When Click They Row Get The Data From they Row And Set Data To The Save Form Field 
  function setitmClickeventForTable(){
     $('#itmtable tr').click(function () {
@@ -66,4 +70,21 @@ $('#itmviewallbtn').click(function(){
 
   function showitmSaveForm(){
     modaltwo.show();
+  }
+
+  function updateItem(CODE){
+    console.log("ok");
+    brI:for(i in item){
+        if(CODE===item[i].itmcode){
+            item[i].itmcode = $('#itemCode').val();
+            item[i].itmname = $('#itemName').val();
+            item[i].itmprice = $('#itemPrices').val();
+            item[i].itmqty = $('#itemQuantity').val();
+
+          break brI;
+        }
+        console.log(item);
+      }
+      $('#itmtable td').parent().remove();
+      getAllDataitm();
   }
