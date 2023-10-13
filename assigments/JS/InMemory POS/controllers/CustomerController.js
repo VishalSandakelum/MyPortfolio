@@ -36,11 +36,17 @@
           getAllData();
         });
 
+        //This Function For Delete Button Action
         $('#deletebtn').click(function(){
           let id = $('#cusinputfield').val();
           console.log(id);
           deleteCustomer(id);
           $('#cusinputfield').val('');
+        });
+
+        //This Function For Update Customer Button Action
+        $('#customerupdatebtn').click(function(){
+          updateCustomer(customerid.value);
         });
 
         //This Function For When Click Some Row Show The Update Form With They Row Value
@@ -63,6 +69,8 @@
             address.value = addres;
             Salary.value = salary;
             
+            customerid.disabled = true;
+
             showSaveForm();
           });
         }
@@ -122,4 +130,23 @@
               return false;
             }
           }
+        }
+
+        //This Function For Update Customer When Click the Update Button
+        function updateCustomer(ID){
+          br:for(i in customerAr){
+            if(ID===customerAr[i].cusid){
+              let updatecus = Object.assign({},Customer);
+
+              customerAr[i].cusid = customerid.value;
+              customerAr[i].name = cusnam.value;
+              customerAr[i].cusnomber = address.value;
+              customerAr[i].cussalry = Salary.value;
+
+              break br;
+            }
+            console.log(customerAr);
+          }
+          $('#cusdatatable td').parent().remove();
+          getAllData();
         }
