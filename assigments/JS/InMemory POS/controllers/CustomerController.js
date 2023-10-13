@@ -94,6 +94,7 @@
           setClickeventForTable();
         }
 
+        //This Function For Delete Customer From Array
         function deleteCustomer(ID){
           let newArray = [];
 
@@ -112,6 +113,7 @@
           }
         }
 
+        //This Function For Check the Input ID Alredy Exicts OR Not
         function checkID(ID){
           for(i in customerAr){
             if(ID===customerAr[i].cusid){
