@@ -1,7 +1,12 @@
 const modaltwo = new bootstrap.Modal(document.querySelector("#staticBackdropitem"), {});
 
+$('#addnewitmbtn').click(function(){
+  console.log("addnewbtn");
+  document.querySelector('#itemCode').disabled = false;
+});
+
 $('#itemsavebtn').click(function(){
-    if(checkitemCODE($('#itemCode').val())){
+    if(checkCode($('#itemCode').val())){
         alert("OOPS , Alredy Exicts this Item CODE , Please enter any Item CODE !");
     }else{
         let newItem = Object.assign({},Item);
@@ -127,6 +132,15 @@ $('#itmviewallbtn').click(function(){
         return true;
       }else{
         return false;
+      }
+    }
+  }
+
+  //This Function For Before Save Some Data Check They Item CODE Alredy Exicts Or Not
+  function checkCode(CODE){
+    for(i in item){
+      if(CODE===item[i].itmcode){
+        return true;
       }
     }
   }
