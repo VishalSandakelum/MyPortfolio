@@ -31,6 +31,7 @@
           //Data Save
           customerAr.push(newCustomer);
           //Data Add For Table
+          $('#cusdatatable td').parent().remove();
           getAllData();
           console.log(customerAr);
           
@@ -142,8 +143,6 @@
         function updateCustomer(ID){
           br:for(i in customerAr){
             if(ID===customerAr[i].cusid){
-              let updatecus = Object.assign({},Customer);
-
               customerAr[i].cusid = customerid.value;
               customerAr[i].name = cusnam.value;
               customerAr[i].cusnomber = address.value;
