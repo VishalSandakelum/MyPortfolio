@@ -12,6 +12,12 @@
 
         const modal = new bootstrap.Modal(document.querySelector("#cusstaticBackdrop"), {});
 
+        //This Function For Add New Button
+        $('#addnewbtn').click(function(){
+          customerid.disabled = false;
+          clearcustomerTextfield();
+        });
+
         //This Function For When Click The Save Button Save All Customer Details
         savebtn.addEventListener("click",function(){
 
@@ -149,4 +155,12 @@
           }
           $('#cusdatatable td').parent().remove();
           getAllData();
+        }
+
+        //This Function For When Click The Add new Customer Button , Clear All TextField
+        function clearcustomerTextfield(){
+          $('#cusId').val('');
+          $('#cusName').val('');
+          $('#cusAddress').val('');
+          $('#cusSalary').val('');
         }
