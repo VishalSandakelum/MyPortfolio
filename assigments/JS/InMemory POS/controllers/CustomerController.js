@@ -20,21 +20,23 @@
 
         //This Function For When Click The Save Button Save All Customer Details
         savebtn.addEventListener("click",function(){
+          if(checkcusID($('#cusId').val())){
+            alert("OOPS , Alredy Exicts this Customer ID , Please enter any Customer ID !");
+          }else{
+            let newCustomer = Object.assign({},Customer);
 
-          let newCustomer = Object.assign({},Customer);
+            newCustomer.cusid = customerid.value;
+            newCustomer.name = cusnam.value;
+            newCustomer.cusnomber = address.value;
+            newCustomer.cussalry = Salary.value;
 
-          newCustomer.cusid = customerid.value;
-          newCustomer.name = cusnam.value;
-          newCustomer.cusnomber = address.value;
-          newCustomer.cussalry = Salary.value;
-
-          //Data Save
-          customerAr.push(newCustomer);
-          //Data Add For Table
-          $('#cusdatatable td').parent().remove();
-          getAllData();
-          console.log(customerAr);
-          
+            //Data Save
+            customerAr.push(newCustomer);
+            //Data Add For Table
+            $('#cusdatatable td').parent().remove();
+            getAllData();
+            console.log(customerAr);
+          }
         });
 
         //This Function For View All Customer
@@ -162,4 +164,13 @@
           $('#cusName').val('');
           $('#cusAddress').val('');
           $('#cusSalary').val('');
+        }
+
+        //This Function For Before Save Some Data Check They Customer ID Alredy Exicts Or Not
+        function checkcusID(ID){
+          for(i in customerAr){
+            if(ID===customerAr[i].cusid){
+              return true;
+            }
+          }
         }
