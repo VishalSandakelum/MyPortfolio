@@ -12,30 +12,36 @@
 
         const modal = new bootstrap.Modal(document.querySelector("#cusstaticBackdrop"), {});
 
+        let checkcustomertextfieldAR = [false,false,false,false];
+
         //This Function For Add New Button
         $('#addnewbtn').click(function(){
           customerid.disabled = false;
           clearcustomerTextfield();
+          alltxtFielddisable();
         });
 
         //This Function For When Click The Save Button Save All Customer Details
         savebtn.addEventListener("click",function(){
+          console.log(checkcustomertextfieldAR)
           if(checkcusID($('#cusId').val())){
             alert("OOPS , Alredy Exicts this Customer ID , Please enter any Customer ID !");
           }else{
-            let newCustomer = Object.assign({},Customer);
+            if(customerFieldArrcheck()){
+              let newCustomer = Object.assign({},Customer);
 
-            newCustomer.cusid = customerid.value;
-            newCustomer.name = cusnam.value;
-            newCustomer.cusnomber = address.value;
-            newCustomer.cussalry = Salary.value;
+              newCustomer.cusid = customerid.value;
+              newCustomer.name = cusnam.value;
+              newCustomer.cusnomber = address.value;
+              newCustomer.cussalry = Salary.value;
 
-            //Data Save
-            customerAr.push(newCustomer);
-            //Data Add For Table
-            $('#cusdatatable td').parent().remove();
-            getAllData();
-            console.log(customerAr);
+              //Data Save
+              customerAr.push(newCustomer);
+              //Data Add For Table
+              $('#cusdatatable td').parent().remove();
+              getAllData();
+              console.log(customerAr);
+            }
           }
         });
 
@@ -56,6 +62,39 @@
         //This Function For Update Customer Button Action
         $('#customerupdatebtn').click(function(){
           updateCustomer(customerid.value);
+        });
+
+        $('#cusId').keyup(function(){
+          if(testValid(/^C00-\d{3,}$/,$('#cusId').val(),'#cusId',cusnam)){
+            checkcustomertextfieldAR[0] = 'true';
+          }else{
+            checkcustomertextfieldAR[0] = 'false';
+          }
+          console.log("cusID");
+        });
+
+        $('#cusName').keyup(function(){
+          if(testValid(/^[A-Za-z ]{5,}$/,$('#cusName').val(),'#cusName',address)){
+            checkcustomertextfieldAR[1] = 'true';
+          }else{
+            checkcustomertextfieldAR[1] = 'false';
+          }
+        });
+
+        $('#cusAddress').keyup(function(){
+          if(testValid(/^0\d{9}$/,$('#cusAddress').val(),'#cusAddress',Salary)){
+            checkcustomertextfieldAR[2] = 'true';
+          }else{
+            checkcustomertextfieldAR[2] = 'false';
+          }
+        });
+
+        $('#cusSalary').keyup(function(){
+          if(testValid(/^[0-9]{2,}([.][0-9]{2})?$/,$('#cusSalary').val(),'#cusSalary','')){
+            checkcustomertextfieldAR[3] = 'true';
+          }else{
+            checkcustomertextfieldAR[3] = 'false';
+          }
         });
 
         //This Function For When Click Some Row Show The Update Form With They Row Value
@@ -172,5 +211,42 @@
             if(ID===customerAr[i].cusid){
               return true;
             }
+          }
+        }
+
+        function testValid(pattern,data,Field,nextField){
+          var regexPattern = pattern;
+      
+          if(regexPattern.test(data)){
+            $(Field).css('border', '1px solid gray');
+            if(nextField!==''){
+              nextField.disabled = false;
+              nextField.style.border = '2px solid red';
+              return true;
+            }
+          }else{
+            $(Field).css('border', '2px solid red');
+            return false;
+          }
+        }
+
+        function alltxtFielddisable(){
+          $('#cusId').css('border', '2px solid red');
+          cusnam.disabled = true;
+          address.disabled = true;
+          Salary.disabled = true;
+        }
+
+        function customerFieldArrcheck(){
+          if(checkcustomertextfieldAR.length===4){
+            for(i in checkcustomertextfieldAR){
+              if(checkcustomertextfieldAR[i]===true & i===4){
+                return true;
+              }else{
+                return false;
+              }
+            }
+          }else{
+            return false;
           }
         }
