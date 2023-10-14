@@ -1,6 +1,7 @@
 const modaltwo = new bootstrap.Modal(document.querySelector("#staticBackdropitem"), {});
 
 $('#addnewitmbtn').click(function(){
+  clearTextfield();
   console.log("addnewbtn");
   document.querySelector('#itemCode').disabled = false;
 });
@@ -143,4 +144,12 @@ $('#itmviewallbtn').click(function(){
         return true;
       }
     }
+  }
+
+  //This Function For When Click The Add new Item Button , Clear All TextField
+  function clearTextfield(){
+    $('#itemCode').val('');
+    $('#itemName').val('');
+    $('#itemQuantity').val('');
+    $('#itemPrices').val('');
   }
