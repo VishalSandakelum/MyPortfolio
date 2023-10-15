@@ -156,4 +156,38 @@ $('#itmviewallbtn').click(function(){
     $('#itemPrices').val('');
   }
 
-  
+  function testValiditmfield(pattern,data,Field,nextField){
+    var regexPattern = pattern;
+
+    if(regexPattern.test(data)){
+      $(Field).css('border', '1px solid gray');
+      if(nextField!==''){
+        nextField.disabled = false;
+        nextField.style.border = '2px solid red';
+      }
+      return true;
+    }else{
+      $(Field).css('border', '2px solid red');
+      return false;
+    }
+  }
+
+  function allitmtxtFielddisable(){
+    $('#itemCode').css('border', '2px solid red');
+    document.querySelector('#itemName').disabled = true;
+    document.querySelector('#itemQuantity').disabled = true;
+    document.querySelector('#itemPrices').disabled = true;
+  }
+
+  function itmFieldArrcheck(){
+    if(checkcustomertextfieldAR.length===4){
+      for(i in checkcustomertextfieldAR){
+        if(checkcustomertextfieldAR[i]==='true'){
+        }else{
+          return false;
+        }
+      }
+    }else{
+      return false;
+    }
+  }
