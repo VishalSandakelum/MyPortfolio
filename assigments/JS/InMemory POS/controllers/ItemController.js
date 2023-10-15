@@ -6,12 +6,14 @@ $('#addnewitmbtn').click(function(){
   clearTextfield();
   console.log("addnewbtn");
   document.querySelector('#itemCode').disabled = false;
+  allitmtxtFielddisable();
 });
 
 $('#itemsavebtn').click(function(){
     if(checkCode($('#itemCode').val())){
         alert("OOPS , Alredy Exicts this Item CODE , Please enter any Item CODE !");
     }else{
+      if(itmFieldArrcheck()!==false){
         let newItem = Object.assign({},Item);
 
         newItem.itmcode = $('#itemCode').val();
@@ -20,7 +22,13 @@ $('#itemsavebtn').click(function(){
         newItem.itmprice = $('#itemPrices').val();
 
         item.push(newItem);
-    }
+
+        $('#itmtable td').parent().remove();
+        getAllDataitm();
+      }else{
+        alert('Please Enter Valid Value & Try Again !');
+      }
+  }
 });
 
 //This Function For View All Item
@@ -29,10 +37,12 @@ $('#itmviewallbtn').click(function(){
     getAllDataitm();
  });
 
+ //This Function For Update Item
  $('#itemupdatebtn').click(function(){
     updateItem($('#itemCode').val());
  });
 
+ //This Function For Delete Item
  $('#itmdeletebtn').click(function(){
     let itmCODE = $('#itmCODfield').val();
     deleteItem(itmCODE);
@@ -40,6 +50,39 @@ $('#itmviewallbtn').click(function(){
     $('#itmtable td').parent().remove();
     getAllDataitm();
  });
+
+ $('#itemCode').keyup(function(){
+  if(testValid(/^I00-\d{3,}$/,$('#itemCode').val(),'#itemCode',document.querySelector('#itemName'))){
+    checkitemtextfieldAR[0] = 'true';
+  }else{
+    checkitemtextfieldAR[0] = 'false';
+  }
+  console.log("cusID");
+});
+
+$('#itemName').keyup(function(){
+  if(testValid(/^[A-Za-z ]{5,}$/,$('#itemName').val(),'#itemName',document.querySelector('#itemPrices'))){
+    checkitemtextfieldAR[1] = 'true';
+  }else{
+    checkitemtextfieldAR[1] = 'false';
+  }
+});
+
+$('#itemPrices').keyup(function(){
+  if(testValid(/^[0-9]{2,}([.][0-9]{2})?$/,$('#itemPrices').val(),'#itemPrices',document.querySelector('#itemQuantity'))){
+    checkitemtextfieldAR[2] = 'true';
+  }else{
+    checkitemtextfieldAR[2] = 'false';
+  }
+});
+
+$('#itemQuantity').keyup(function(){
+  if(testValid(/^(100|[1-9]\d{0,1})$/,$('#itemQuantity').val(),'#itemQuantity','')){
+    checkitemtextfieldAR[3] = 'true';
+  }else{
+    checkitemtextfieldAR[3] = 'false';
+  }
+});
 
  //This Function For Set Click Action For Table Row, When Click They Row Get The Data From they Row And Set Data To The Save Form Field 
  function setitmClickeventForTable(){
@@ -156,22 +199,6 @@ $('#itmviewallbtn').click(function(){
     $('#itemPrices').val('');
   }
 
-  function testValiditmfield(pattern,data,Field,nextField){
-    var regexPattern = pattern;
-
-    if(regexPattern.test(data)){
-      $(Field).css('border', '1px solid gray');
-      if(nextField!==''){
-        nextField.disabled = false;
-        nextField.style.border = '2px solid red';
-      }
-      return true;
-    }else{
-      $(Field).css('border', '2px solid red');
-      return false;
-    }
-  }
-
   function allitmtxtFielddisable(){
     $('#itemCode').css('border', '2px solid red');
     document.querySelector('#itemName').disabled = true;
@@ -180,9 +207,9 @@ $('#itmviewallbtn').click(function(){
   }
 
   function itmFieldArrcheck(){
-    if(checkcustomertextfieldAR.length===4){
-      for(i in checkcustomertextfieldAR){
-        if(checkcustomertextfieldAR[i]==='true'){
+    if(checkitemtextfieldAR.length===4){
+      for(i in checkitemtextfieldAR){
+        if(checkitemtextfieldAR[i]==='true'){
         }else{
           return false;
         }
