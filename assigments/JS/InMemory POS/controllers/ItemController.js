@@ -1,5 +1,7 @@
 const modaltwo = new bootstrap.Modal(document.querySelector("#staticBackdropitem"), {});
 
+let checkitemtextfieldAR = [false,false,false,false];
+
 $('#addnewitmbtn').click(function(){
   clearTextfield();
   console.log("addnewbtn");
@@ -153,3 +155,5 @@ $('#itmviewallbtn').click(function(){
     $('#itemQuantity').val('');
     $('#itemPrices').val('');
   }
+
+  

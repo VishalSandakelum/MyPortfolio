@@ -27,7 +27,8 @@
           if(checkcusID($('#cusId').val())){
             alert("OOPS , Alredy Exicts this Customer ID , Please enter any Customer ID !");
           }else{
-            if(customerFieldArrcheck()){
+            console.log(customerFieldArrcheck());
+            if(customerFieldArrcheck()!==false){
               let newCustomer = Object.assign({},Customer);
 
               newCustomer.cusid = customerid.value;
@@ -41,6 +42,8 @@
               $('#cusdatatable td').parent().remove();
               getAllData();
               console.log(customerAr);
+            }else{
+              alert('Please Enter Valid Value & Try Again !');
             }
           }
         });
@@ -222,8 +225,8 @@
             if(nextField!==''){
               nextField.disabled = false;
               nextField.style.border = '2px solid red';
-              return true;
             }
+            return true;
           }else{
             $(Field).css('border', '2px solid red');
             return false;
@@ -240,8 +243,7 @@
         function customerFieldArrcheck(){
           if(checkcustomertextfieldAR.length===4){
             for(i in checkcustomertextfieldAR){
-              if(checkcustomertextfieldAR[i]===true & i===4){
-                return true;
+              if(checkcustomertextfieldAR[i]==='true'){
               }else{
                 return false;
               }
