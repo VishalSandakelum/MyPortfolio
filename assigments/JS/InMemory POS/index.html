@@ -323,39 +323,38 @@
                             <div class="mb-3 d-flex flex-row">
                               <div style="width: 45%;">
                                 <label for="exampleInputEmail1" class="form-label">Order ID : </label>
-                                <select id="inputState" class="form-select">
-                                  <option selected></option>
-                                  <option>C00-001</option>
-                                </select>
+                                <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
                               </div>
                               <div class="col-5" style="margin-left: 10%; width: 45%;">
                                 <label for="exampleInputEmail1" class="form-label">Date : </label>
-                                <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                <input type="date" class="form-control w-100" id="exampleInputEmail1">
                               </div>
                             </div>
                             <div class="mb-3 d-flex flex-row">
                                 <div style="width: 45%;">
                                   <label for="exampleInputEmail1" class="form-label">Customer : </label>
-                                  <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                  <select id="cusstate" class="form-select">
+                                    <option selected></option>
+                                  </select>
                                 </div>
                                 <div class="col-5" style="margin-left: 10%; width: 45%;">
                                   <label for="exampleInputEmail1" class="form-label">Customer ID : </label>
-                                  <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                  <input type="" class="form-control w-100" id="cusIDfield">
                                 </div>
                             </div>
                             <div class="mb-3 d-flex flex-row">
                                 <div style="width: 45%;">
                                   <label for="exampleInputEmail1" class="form-label">Name : </label>
-                                  <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                  <input type="email" class="form-control w-100" id="cusNameField" aria-describedby="emailHelp">
                                 </div>
                                 <div class="col-5" style="margin-left: 10%; width: 45%;">
                                   <label for="exampleInputEmail1" class="form-label">Salary : </label>
-                                  <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                  <input type="email" class="form-control w-100" id="CusSalaryField">
                                 </div>
                               </div>
                             <div class="mb-3">
-                              <label for="exampleInputPassword1" class="form-label">Address :</label>
-                              <input type="" class="form-control" id="exampleInputPassword1">
+                              <label for="exampleInputPassword1" class="form-label">Number :</label>
+                              <input type="" class="form-control" id="CusNumberField">
                             </div>
                           </form>
                     </div>
@@ -372,33 +371,32 @@
                             <div class="mb-3 d-flex flex-row">
                               <div class="col-6">
                                 <label for="exampleInputEmail1" class="form-label">Item : </label>
-                                <select id="inputState" class="form-select">
+                                <select id="inputitmState" class="form-select">
                                   <option selected></option>
-                                  <option>I00-001</option>
                                 </select>
                               </div>
                               <div style="margin-left: 5%; width: 50%;">
                                 <label for="exampleInputEmail1" class="form-label">Item Code : </label>
-                                <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                <input type="email" class="form-control w-100" id="itIdField">
                               </div>
                             </div>
                             <div class="mb-3 d-flex flex-row">
                                 <div class="col-5">
                                   <label for="exampleInputEmail1" class="form-label">Item Name : </label>
-                                  <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                  <input type="email" class="form-control w-100" id="itemNamefield" aria-describedby="emailHelp">
                                 </div>
                                 <div style="margin-left: 5%;">
                                   <label for="exampleInputEmail1" class="form-label">Price : </label>
-                                  <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                  <input type="email" class="form-control w-100" id="itemPriceField">
                                 </div>
                                 <div style="margin-left: 5%;">
                                     <label for="exampleInputEmail1" class="form-label">Qty OnHa : </label>
-                                    <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                    <input type="email" class="form-control w-100" id="qtyOnhandFieitm">
                                   </div>
                               </div>
                             <div class="mb-3">
                               <label for="exampleInputPassword1" class="form-label">Order Quantity :</label>
-                              <input type="" class="form-control" id="exampleInputPassword1">
+                              <input type="" class="form-control" id="orderQuantityField">
                             </div>
                             <button type="button" class="btn btn-warning" style="position: relative; margin-left: 83%;">Add Item</button>
                           </form>
@@ -457,6 +455,7 @@
     <script src="db/DB.js"></script>
     <script src="controllers/CustomerController.js"></script>
     <script src="controllers/ItemController.js"></script>
+    <script src="controllers/OrderController.js"></script>
     <script>
 
         const cuspagebtn = document.querySelector("#cusbtn");
