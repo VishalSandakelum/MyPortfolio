@@ -100,6 +100,7 @@ $('#purchObtnO').click(function(){
     $('#orderitmtable td').parent().remove();
     clearAllfieldinorderForm();
     $('#orderidfield').val(genaratenewOID());
+    alert('Successfully Order Placement !');
 });
 
 //This Function For Get All Data From Array
