@@ -1,11 +1,14 @@
 let cusstate = document.querySelector('#cusstate');
 let itmsatate = document.querySelector('#inputitmState');
+document.querySelector('#orderidfield').disabled = true;
 
 let Arr = [];
 
 let bool = false;
 
 cusstate.style.borderm = '2px solid red'
+
+$('#orderidfield').val(genaratenewOID());
 
 for (i in customerAr) {
     const option = document.createElement("option");
@@ -95,14 +98,18 @@ $('#purchObtnO').click(function(){
 
     Arr = [];
     $('#orderitmtable td').parent().remove();
+    clearAllfieldinorderForm();
+    $('#orderidfield').val(genaratenewOID());
 });
 
 //This Function For Get All Data From Array
 function getAllOrderData(){    
     for(i in Arr){
       let inam;
-      if(Arr[i].code===item[i].itmcode){
-        inam = item[i].itmname;
+      for(j in item){
+        if(Arr[i].code===item[j].itmcode){
+            inam = item[j].itmname;
+        }
       }
       console.log(Arr[i]);
       let code = Arr[i].code;
@@ -124,4 +131,26 @@ function getAllOrderData(){
               </tr>`;
 
     $("#orderitmtable").append(row);
+  }
+
+  function clearAllfieldinorderForm(){
+    $('#cusIDfield').val('');
+    $('#cusNameField').val('');
+    $('#CusSalaryField').val('');
+    $('#CusNumberField').val('');
+    
+    $('#itIdField').val('');
+    $('#itemNamefield').val('');
+    $('#itemPriceField').val('');
+    $('#qtyOnhandFieitm').val('');
+  }
+
+  function genaratenewOID(){
+    let sentence = orderDB[orderDB.length-1].oid;
+
+    let regex = /(\w+)$/;
+    let match = regex.exec(sentence);
+
+    let newOID = ('OID-00'+`${parseFloat('001')+parseFloat(match)}`);
+    return newOID;
   }
