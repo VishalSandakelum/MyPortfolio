@@ -82,6 +82,21 @@ $('#additembtnO').click(function(){
     }
 });
 
+$('#purchObtnO').click(function(){
+    let neworder = Object.assign({},order);
+
+    neworder.oid = $('#orderidfield').val();
+    neworder.date = $('#datefielsO').val();
+    neworder.customerID = $('#cusIDfield').val();
+    neworder.orderDetails = Arr;
+    
+    orderDB.push(neworder);
+    console.log(orderDB);
+
+    Arr = [];
+    $('#orderitmtable td').parent().remove();
+});
+
 //This Function For Get All Data From Array
 function getAllOrderData(){    
     for(i in Arr){
