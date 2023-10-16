@@ -74,8 +74,39 @@ $('#additembtnO').click(function(){
 
         Arr.push(ODetails);
         console.log(Arr);
+        $('#orderitmtable td').parent().remove();
+        getAllOrderData();
     }else{
         $('#orderQuantityField').css('border','2px solid red');
         $('#orderQuantityField').focus();
     }
 });
+
+//This Function For Get All Data From Array
+function getAllOrderData(){    
+    for(i in Arr){
+      let inam;
+      if(Arr[i].code===item[i].itmcode){
+        inam = item[i].itmname;
+      }
+      console.log(Arr[i]);
+      let code = Arr[i].code;
+      let unitPrice = Arr[i].unitPrice;
+      let qty = Arr[i].qty;
+
+      ortabledatarow(code,inam,unitPrice,qty);
+    }
+  }
+
+  //This Function For All Data Add Add To The Table
+  function ortabledatarow(code,inam,unitPrice,qty){
+
+    let row = `<tr>
+                <td>${code}</td>
+                <td>${inam}</td>
+                <td>${unitPrice}</td>
+                <td>${qty}</td>
+              </tr>`;
+
+    $("#orderitmtable").append(row);
+  }
