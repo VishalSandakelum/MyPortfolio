@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case1</title>
+
+    <link rel="stylesheet" href="assets/8.0.1_normalize.css">
+
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            border-radius: 18px;
+            background-color: blue;
+            position: absolute;
+            left: 0%;
+            top: 3%;
+            animation-name: rotate;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        
+        @keyframes rotate {
+            0%{
+                left: 0%;
+            }25%{
+                transform: rotate(180deg);
+                top: 3%;
+                left: 85%;
+                background-color: red;
+            }50%{
+                transform: rotate(-180deg);
+                top: 85%;
+                left: 85%;
+                background-color: green;
+            }75%{
+                transform: rotate(180deg);
+                left: 0%;
+                top: 85%;
+                background-color: rgb(128, 0, 113);
+            }100%{
+                transform: rotate(-180deg);
+                top: 3%;
+                left: 0%;
+                background-color: rgb(240, 215, 26);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
