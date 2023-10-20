@@ -127,12 +127,20 @@ body>div:nth-child(1){
         row-gap: 2%;
     }
 
+    #possasssection{
+        height: 30vh;
+    }
+
     .firstrow{
         height: 296%;
         display: flex;
         display: flex;
         flex-direction: column;
         row-gap: 5%;
+    }
+
+    #possasssection>.firstrow{
+        height: 100%;
     }
     
     .secondrow{
@@ -181,6 +189,14 @@ body>div:nth-child(1){
         flex-direction: column;
         row-gap: 5%;
     }
+
+    #possasssection{
+        height: 30vh;
+    }
+
+    #possasssection>.firstrow{
+        height: 100%;
+    }
     
     .secondrow{
         height: 296%;
@@ -227,6 +243,14 @@ body>div:nth-child(1){
         display: flex;
         flex-direction: column;
         row-gap: 5%;
+    }
+
+    #possasssection{
+        height: 30vh;
+    }
+
+    #possasssection>.firstrow{
+        height: 100%;
     }
     
     .secondrow{
