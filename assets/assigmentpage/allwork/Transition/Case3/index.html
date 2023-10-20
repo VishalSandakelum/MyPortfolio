@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case3</title>
+
+    <link rel="stylesheet" href="assets/8.0.1_normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        section{
+            position: absolute;
+            width: 30%;
+            height: 30%;
+            top: 0%;
+            left: 0%;
+            right: 0%;
+            bottom: 0%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        section>div{
+            position: relative;
+            height: 300%;
+            width: 100%;
+            bottom: 100%;
+        }
+
+        section>div>div{
+            position: relative;
+            width: 100%;
+            height: calc(100%/3);
+        }
+
+        section>div>div:nth-child(1){
+            position: relative;
+            transition: all;
+            transition-duration: 1s;
+            top: 0%;
+            z-index: 20;
+        }
+
+        section>div>div:nth-child(1)>button{
+           position: absolute;
+           background-color: transparent;
+           top: 15%; 
+           left: 0%;
+           right: 0%;
+           margin: auto;
+           border: none;
+        }
+
+        section>div>div:nth-child(2){
+            background: url('assets/rolceroyecar.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        section>div>div:nth-child(3){
+            transition: all;
+            transition-duration: 2s;
+            position: relative;
+            background-color: gray;
+            opacity: 50%;
+            bottom: 0%;
+        }
+
+        section:hover .thirdDiv{
+            transition: all;
+            transition-duration: 1s;
+            bottom: 33%;
+        }
+
+        section:hover .buttondiv{
+            transition: all;
+            transition-duration: 1s;
+            top: 33%;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <div class="buttondiv">
+                <button>
+                    <i class="fa fa-trash-o fa-4x"></i>
+                </button>
+            </div>
+            <div></div>
+            <div class="thirdDiv"></div>
+        </div>
+    </section>
+</body>
+</html>

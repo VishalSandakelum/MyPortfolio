@@ -10,6 +10,9 @@ const liketext = document.querySelector('#liketext');
 const unliketext = document.querySelector('#unliketext');
 const lovetext = document.querySelector('#lovetext');
 
+const buttonforleftside = document.querySelector('.buttonforleftside');
+const buttonsection = document.querySelector('.buttonsection');
+
 let likebtncount = 0;
 let unlikebtncount = 0;
 let lovebtncount = 0;
@@ -75,4 +78,9 @@ lovebtn.addEventListener('click', function(){
     if(lovebtncount>1){
         lovebtncount = 0;
     }
+});
+
+buttonforleftside.addEventListener('click',function(){
+    console.log('buttonsection');
+    buttonsection.style.transform = `translateX(-33.5px)`;
 });

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case1</title>
+
+    <link rel="stylesheet" href="assets/8.0.1_normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        section{
+            position: absolute;
+            width: 40%;
+            height: 70%;
+            top: 0%;
+            bottom: 0%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10%;
+        }
+
+        section>div{
+            transition: all;
+            transition-duration: 2s;
+            position: relative;
+            width: 50%;
+            height: calc(100%/5);
+            background-color: purple;
+            color: white;
+            right: 37%;
+            border-radius: 5px;
+        }
+
+        section>div:hover{
+            transition: all;
+            transition-duration: 2s;
+            right: 0%;
+        }
+
+        section>div>h3{
+            position: relative;
+            width: fit-content;
+            left: 10%;
+        }
+
+        i{
+            position: absolute;
+            height: fit-content;
+            top: 0%;
+            bottom: 0%;
+            right: 10%;
+            margin: auto;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <h3>Menu One</h3>
+            <i class="fa fa-address-book fa-2x"></i>
+        </div>
+        <div>
+            <h3>Menu Two</h3>
+            <i class="fa fa-amazon fa-2x"></i>
+        </div>
+        <div>
+            <h3>Menu Three</h3>
+            <i class="fa fa-calendar fa-2x"></i>
+        </div>
+        <div>
+            <h3>Menu Four</h3>
+            <i class="fa fa-clone fa-2x"></i>
+        </div>
+        <div>
+            <h3>Menu Five</h3>
+            <i class="fa fa-user-circle-o fa-2x"></i>
+        </div>
+    </section>
+</body>
+</html>
