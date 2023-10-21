@@ -91,7 +91,11 @@ buttonforleftside.addEventListener('click',function(){
     }else if(count===1){
         buttonsection.style.left = (-95*2.07)+'%';
     }
-    count++;
+    
+    if(count>=2){
+    }else{
+        count++;
+    }
     console.log(count);
 });
 
@@ -102,6 +106,10 @@ buttonforrightside.addEventListener('click',function(){
     }else if(count===1){
         buttonsection.style.left = 0+'%';
     }
-    count--;
+
+    if(count<=0){
+    }else{
+        count--;
+    }
     console.log(count);
 });
