@@ -12,6 +12,7 @@ const lovetext = document.querySelector('#lovetext');
 
 const buttonforleftside = document.querySelector('.buttonforleftside');
 const buttonsection = document.querySelector('.buttonsection');
+const buttonforrightside = document.querySelector('.buttonforrightside');
 
 let likebtncount = 0;
 let unlikebtncount = 0;
@@ -91,5 +92,16 @@ buttonforleftside.addEventListener('click',function(){
         buttonsection.style.left = (-95*2.07)+'%';
     }
     count++;
+    console.log(count);
+});
+
+buttonforrightside.addEventListener('click',function(){
+    console.log('buttonsection');
+    if(count===2){
+        buttonsection.style.left = -95+'%';
+    }else if(count===1){
+        buttonsection.style.left = 0+'%';
+    }
+    count--;
     console.log(count);
 });
