@@ -17,6 +17,8 @@ let likebtncount = 0;
 let unlikebtncount = 0;
 let lovebtncount = 0;
 
+let count = 0;
+
 //This Function For , Handle Loading Process
 window.addEventListener('load', function() {
     setTimeout(function() {
@@ -81,6 +83,13 @@ lovebtn.addEventListener('click', function(){
 });
 
 buttonforleftside.addEventListener('click',function(){
+    buttonsection.style.transitionDuration = '1s';
     console.log('buttonsection');
-    buttonsection.style.transform = `translateX(-33.5px)`;
+    if(count===0){
+        buttonsection.style.left = -95+'%';
+    }else if(count===1){
+        buttonsection.style.left = (-95*2.07)+'%';
+    }
+    count++;
+    console.log(count);
 });

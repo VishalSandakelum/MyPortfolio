@@ -1257,7 +1257,7 @@ main{
     display: flex;
     column-gap: 1%;
 
-    animation-name: animaforshowprojects;
+    animation-name: animaorshowprojects;
     animation-duration: 18s;
     animation-delay: 5s;
     animation-iteration-count: infinite;
