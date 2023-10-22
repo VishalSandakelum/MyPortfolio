@@ -116,6 +116,7 @@ main{
     background-color: #E2EFF7;
     height: 90vh;
     width: 100%;
+    z-index: 1;
 }
 
 .main2{
@@ -257,6 +258,7 @@ main{
     display: flex;
     flex-direction: column;
     row-gap: 15%;
+    z-index: 2;
 }
 
 .leftsidebuttonsection>h4{
@@ -354,6 +356,7 @@ main{
     height: 300px;
     right: 0%;
     bottom: 10%;
+    z-index: 1;
 }
 
 .moresection>div:nth-child(1){
@@ -368,7 +371,7 @@ main{
 
 .moresection>div:nth-child(1)>div>img{
     position: relative;
-    right: 15px;
+    right: 7px;
     width: 145%;
     animation-name: movebal;
     animation-duration: 13s;
@@ -385,7 +388,6 @@ main{
     top: 27%;
     border-radius: 100%;
     background-color: transparent;
-    background-color: red;
     border: none;
     cursor: pointer;
     z-index: 4000;
@@ -1757,6 +1759,7 @@ footer{
     background-color: #E2EFF7;
     position: relative;
     height: 60vh;
+    z-index: 1;
 }
 
 .footerdetailsmainsection{
