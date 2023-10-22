@@ -3668,6 +3668,18 @@ footer>aside>img{
         height: 60vh;
     }
 
+    /*More Information BUTTON*/
+
+    .moresection>div:nth-child(1)>div>img{
+        position: relative;
+        width: 76%;
+        animation-name: movebal;
+        animation-duration: 13s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        cursor: pointer;
+    }
+
     /*Second Page*/
 
     #mainsectionthree{
