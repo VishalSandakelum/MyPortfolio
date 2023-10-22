@@ -42,7 +42,7 @@
     overflow: hidden;
 }
 
-svg{
+.firstrow>div svg,.secondrow>div svg{
     transition: all;
     transition-duration: 3s;
     bottom: 3%;
@@ -55,7 +55,18 @@ svg{
 
 }
 
-.firstrow>div>svg:hover{
+.firstrow>div>svg , .secondrow>div>svg{
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    width: 0%;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+    z-index: -1;
+}
+
+.firstrow>div:hover svg,.secondrow>div:hover svg{
     transition: all;
     transition-duration: 2s;
     position: absolute;
@@ -73,6 +84,7 @@ svg{
     border-radius: 15px;
     background-color: transparent;
     cursor: pointer;
+    z-index: 999;
 }
 
 .firstrow>div>a>button>h2,.secondrow>div>a>button>h2{
