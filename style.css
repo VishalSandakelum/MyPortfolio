@@ -346,6 +346,254 @@ main{
     box-shadow: 0px 4px 4px rgba(128, 130, 132, 0.8) ;
 }
 
+/*More Informtion BUTTON*/
+
+.moresection{
+    position: fixed; 
+    width: 90px;
+    height: 300px;
+    right: 0%;
+    bottom: 10%;
+}
+
+.moresection>div:nth-child(1){
+    position: absolute;
+    width: 70%;
+    height: 23%;
+    left: 15%;
+    bottom: 0%;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.moresection>div:nth-child(1)>div>img{
+    position: relative;
+    right: 15px;
+    width: 145%;
+    animation-name: movebal;
+    animation-duration: 13s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    cursor: pointer;
+}
+
+.moresection>div:nth-child(1)>div>button{
+    position: absolute;
+    width: 80%;
+    height: 49%;
+    right: 28%;
+    top: 27%;
+    border-radius: 100%;
+    background-color: transparent;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+    z-index: 4000;
+}
+
+.moresection>div>div{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Concert One', cursive;
+}
+
+.popball:nth-child(2){
+    position: absolute;
+    bottom: 7%;
+    left: 5%;
+    width: 30%;
+    height: 10%;
+    background-color: #59AEE1;
+    border-radius: 100%;
+    animation-name: bal1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.popball:nth-child(3){
+    position: absolute;
+    bottom: 7%;
+    width: 25%;
+    height: 8%;
+    right: 25%;
+    background-color: #59AEE1;
+    border-radius: 100%;
+    animation-name: bal2;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+.popball:nth-child(4){
+    position: absolute;
+    bottom: 7%;
+    width: 20%;
+    height: 6%;
+    right: 25%;
+    background-color: #59AEE1;
+    border-radius: 100%;
+    animation-name: bal3;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.popball:nth-child(5){
+    position: absolute;
+    bottom: 7%;
+    width: 18%;
+    height: 6%;
+    left: 5%;
+    background-color: #59AEE1;
+    border-radius: 100%;
+    animation-name: bal4;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+.popball:nth-child(6){
+    position: absolute;
+    bottom: 7%;
+    width: 13%;
+    height: 4%;
+    right: 25%;
+    background-color: #59AEE1;
+    border-radius: 100%;
+    animation-name: bal5;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movebal{
+    0%{
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes bal1{
+    0%{
+        bottom: 15%;
+        width: 24%;
+        height: 8%;
+    }25%{
+        bottom: 48%;
+        width: 18%;
+        height: 6%;
+    }50%{
+        left: 45%;
+        width: 12%;
+        height: 4%;
+    }75%{
+        width: 6%;
+        height: 2%;
+    }100%{
+        
+        bottom: 78%;
+        width: 0%;
+        height: 0%;
+    }
+}
+
+@keyframes bal2{
+    0%{
+        bottom: 15%;
+        width: 24%;
+        height: 8%;
+    }25%{
+        bottom: 48%;
+        width: 18%;
+        height: 6%;
+    }50%{
+        right: 45%;
+        width: 12%;
+        height: 4%;
+    }75%{
+        width: 6%;
+        height: 2%;
+    }100%{
+        
+        bottom: 78%;
+        width: 0%;
+        height: 0%;
+    }
+}
+
+@keyframes bal3{
+    0%{
+        bottom: 15%;
+        width: 24%;
+        height: 8%;
+    }25%{
+        bottom: 48%;
+        width: 18%;
+        height: 6%;
+    }50%{
+        right: 45%;
+        width: 12%;
+        height: 4%;
+    }75%{
+        width: 6%;
+        height: 2%;
+    }100%{
+        
+        bottom: 78%;
+        width: 0%;
+        height: 0%;
+    }
+}
+
+@keyframes bal4{
+    0%{
+        bottom: 15%;
+        width: 24%;
+        height: 8%;
+    }25%{
+        bottom: 48%;
+        width: 18%;
+        height: 6%;
+    }50%{
+        left: 50%;
+        width: 12%;
+        height: 4%;
+    }75%{
+        width: 6%;
+        height: 2%;
+    }100%{
+        
+        bottom: 85%;
+        width: 0%;
+        height: 0%;
+    }
+}
+
+@keyframes bal5{
+    0%{
+        bottom: 15%;
+        width: 24%;
+        height: 8%;
+    }25%{
+        bottom: 48%;
+        width: 18%;
+        height: 6%;
+    }50%{
+        right: 10%;
+        width: 12%;
+        height: 4%;
+    }75%{
+        width: 6%;
+        height: 2%;
+    }100%{
+        
+        bottom: 78%;
+        width: 0%;
+        height: 0%;
+    }
+}
+
 /*Second Page*/
 
 #mainsectionthree{
