@@ -381,16 +381,7 @@ main{
 }
 
 .moresection>div:nth-child(1)>div>button{
-    position: absolute;
-    width: 80%;
-    height: 49%;
-    right: 28%;
-    top: 27%;
-    border-radius: 100%;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    z-index: 4000;
+    display: none;
 }
 
 .moresection>div>div{
