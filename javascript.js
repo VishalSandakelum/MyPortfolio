@@ -20,6 +20,23 @@ let lovebtncount = 0;
 
 let count = 0;
 
+function getViewportDimensionsInVWVH() {
+  let viewportWidth = window.innerWidth;
+  let viewportHeight = window.innerHeight;
+
+  // 1vw is 1% of the viewport width
+  let vw = viewportWidth / 100;
+  // 1vh is 1% of the viewport height
+  let vh = viewportHeight / 100;
+
+  return { vw, vh };
+}
+
+let { vw, vh } = getViewportDimensionsInVWVH();
+
+alert("1vw is " + vw + "px");
+
+
 //This Function For , Handle Loading Process
 window.addEventListener('load', function() {
     setTimeout(function() {
