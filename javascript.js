@@ -20,12 +20,6 @@ let lovebtncount = 0;
 
 let count = 0;
 
-let viewportWidthVW = window.innerWidth / window.innerWidth * 100; // This will always be 100vw
-  let viewportHeightVH = window.innerHeight / window.innerHeight * 100; // This will always be 100vh
-
-  alert("Viewport width: " + viewportWidthVW + "vw");
-  alert("Viewport height: " + viewportHeightVH + "vh");
-
 //This Function For , Handle Loading Process
 window.addEventListener('load', function() {
     setTimeout(function() {
